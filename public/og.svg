@@ -1,0 +1,36 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="white"/>
+  <g stroke="#050505" stroke-width="2" opacity="0.18">
+    <path d="M0 90H1200"/>
+    <path d="M0 180H1200"/>
+    <path d="M0 270H1200"/>
+    <path d="M0 360H1200"/>
+    <path d="M0 450H1200"/>
+    <path d="M0 540H1200"/>
+    <path d="M120 0V630"/>
+    <path d="M240 0V630"/>
+    <path d="M360 0V630"/>
+    <path d="M480 0V630"/>
+    <path d="M600 0V630"/>
+    <path d="M720 0V630"/>
+    <path d="M840 0V630"/>
+    <path d="M960 0V630"/>
+    <path d="M1080 0V630"/>
+  </g>
+  <rect x="72" y="72" width="1056" height="486" fill="white" stroke="#050505" stroke-width="6"/>
+  <rect x="92" y="92" width="1016" height="52" fill="#050505"/>
+  <text x="112" y="126" fill="white" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="900">DANIEL FLOCKHART / PORTFOLIO</text>
+  <text x="112" y="286" fill="#050505" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="92" font-weight="900">DANIEL</text>
+  <text x="112" y="390" fill="white" stroke="#050505" stroke-width="3" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="92" font-weight="900">FLOCKHART</text>
+  <text x="112" y="474" fill="#050505" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700">AI engineer / full-stack builder / startup operator</text>
+  <g stroke="#050505" stroke-width="5">
+    <path d="M792 246H980L1044 336"/>
+    <path d="M792 394H934L1042 256"/>
+    <circle cx="792" cy="246" r="16" fill="white"/>
+    <circle cx="980" cy="246" r="16" fill="white"/>
+    <circle cx="1044" cy="336" r="16" fill="white"/>
+    <circle cx="792" cy="394" r="16" fill="white"/>
+    <circle cx="934" cy="394" r="16" fill="white"/>
+    <circle cx="1042" cy="256" r="16" fill="white"/>
+  </g>
+</svg>

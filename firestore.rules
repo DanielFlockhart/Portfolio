@@ -1,0 +1,22 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Public CMS content. Write it from Firebase Console, trusted admin scripts, or a future dashboard.
+    match /projects/{projectId} {
+      allow read: if resource.data.visibility == "published";
+      allow write: if false;
+    }
+
+    match /writing/{writingId} {
+      allow read: if resource.data.visibility == "published";
+      allow write: if false;
+    }
+
+    // Contact messages are written by the server route with Firebase Admin SDK, which bypasses rules.
+    // Do not allow client-side reads/writes here unless you add App Check, Auth and rate limiting.
+    match /contactMessages/{messageId} {
+      allow read, write: if false;
+    }
+  }
+}

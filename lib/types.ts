@@ -1,0 +1,50 @@
+export type LinkItem = {
+  label: string;
+  href: string;
+  external?: boolean;
+};
+
+export type Metric = {
+  label: string;
+  value: string;
+};
+
+export type Project = {
+  slug: string;
+  title: string;
+  kicker: string;
+  summary: string;
+  description: string;
+  category: string;
+  year: string;
+  status: "Live" | "Research" | "Prototype" | "Archived";
+  visibility: "published" | "draft";
+  featured?: boolean;
+  featuredOrder?: number;
+  stack: string[];
+  highlights: string[];
+  metrics: Metric[];
+  links: LinkItem[];
+};
+
+export type Experience = {
+  role: string;
+  organisation: string;
+  period: string;
+  summary: string;
+  tags: string[];
+};
+
+export type WritingItem = {
+  title: string;
+  description: string;
+  date: string;
+  status: "Draft" | "Published" | "Idea";
+  href?: string;
+};
+
+export type ContactMessage = {
+  name: string;
+  email: string;
+  message: string;
+};
