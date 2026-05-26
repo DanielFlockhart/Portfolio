@@ -8,7 +8,6 @@ A reusable portfolio starter built with **Next.js**, **Tailwind CSS** and **Fire
 - Tailwind CSS v4 setup
 - Aesthetic dark technical design
 - Project case-study pages
-- Writing page for technical notes
 - Contact form with server-side Firestore storage
 - Firebase Admin SDK integration with local-data fallback
 - Firebase App Hosting config

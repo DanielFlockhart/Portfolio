@@ -16,6 +16,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  icons: {
+    icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+  },
   openGraph: {
     title: `${profile.name} — ${profile.role}`,
     description: profile.description,
@@ -41,7 +45,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="en" data-scroll-behavior="smooth">
       <body>
         <div className="portfolio-shell relative min-h-screen overflow-hidden bg-white text-black">
           <div className="paper-grid pointer-events-none fixed inset-0" />

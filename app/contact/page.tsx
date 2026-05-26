@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <Section eyebrow="Contact" title="Hiring, collaborating, or building something difficult?" className="pt-20">
+    <Section eyebrow="Contact" title="Hiring, collaborating, or building something difficult?" className="min-h-[calc(100svh-4rem)] pt-20">
       <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
         <div className="space-y-6 text-neutral-700">
           <p className="border-l-8 border-black bg-white py-2 pl-5 text-lg font-medium leading-8">

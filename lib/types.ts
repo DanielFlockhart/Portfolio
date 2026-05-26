@@ -35,12 +35,13 @@ export type Experience = {
   tags: string[];
 };
 
-export type WritingItem = {
+export type Achievement = {
+  slug: string;
   title: string;
-  description: string;
-  date: string;
-  status: "Draft" | "Published" | "Idea";
-  href?: string;
+  category: string;
+  period: string;
+  summary: string;
+  details: string[];
 };
 
 export type ContactMessage = {

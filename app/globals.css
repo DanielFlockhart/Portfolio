@@ -132,139 +132,26 @@ dd {
   white-space: nowrap;
 }
 
-.system-diagram {
-  background:
-    linear-gradient(to right, rgba(5, 5, 5, 0.08) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(5, 5, 5, 0.08) 1px, transparent 1px),
-    var(--paper-soft);
-  background-size: 36px 36px;
-  isolation: isolate;
+html:has(.home-scroll-page) {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
+  scroll-snap-type: y mandatory;
 }
 
-.system-diagram::before {
-  background: linear-gradient(to bottom, transparent, rgba(5, 5, 5, 0.12), transparent);
-  content: "";
-  inset: -25% 0 auto;
-  height: 48%;
-  position: absolute;
-  transform: translateY(-100%);
-  animation: diagram-scan 5.6s ease-in-out infinite;
-  z-index: 1;
+body:has(.home-scroll-page) {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
+  scroll-snap-type: y mandatory;
 }
 
-.diagram-node {
-  align-items: center;
-  background: var(--paper);
-  border: 2px solid var(--ink);
-  display: flex;
-  font-size: 11px;
-  font-weight: 800;
-  height: 54px;
-  justify-content: center;
-  line-height: 1;
-  position: absolute;
-  text-transform: uppercase;
-  width: 84px;
-  z-index: 2;
+.home-scroll-section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 
-.diagram-node::after {
-  background: var(--ink);
-  content: "";
-  height: 8px;
-  position: absolute;
-  right: -5px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 8px;
-}
-
-.node-a {
-  left: 8%;
-  top: 14%;
-  animation: node-jolt 3.8s ease-in-out infinite;
-}
-
-.node-b {
-  right: 12%;
-  top: 24%;
-  animation: node-jolt 3.8s ease-in-out 700ms infinite;
-}
-
-.node-c {
-  left: 18%;
-  bottom: 17%;
-  animation: node-jolt 3.8s ease-in-out 1.4s infinite;
-}
-
-.node-d {
-  right: 7%;
-  bottom: 10%;
-  animation: node-jolt 3.8s ease-in-out 2.1s infinite;
-}
-
-.diagram-line {
-  background: var(--ink);
-  display: block;
-  height: 2px;
-  left: 23%;
-  position: absolute;
-  top: 34%;
-  transform-origin: left center;
-  width: 52%;
-  z-index: 0;
-}
-
-.line-a {
-  animation: line-pulse 3.2s ease-in-out infinite;
-}
-
-.line-b {
-  top: 60%;
-  transform: rotate(-18deg);
-  width: 62%;
-  animation: line-pulse 3.2s ease-in-out 600ms infinite;
-}
-
-.line-c {
-  left: 42%;
-  top: 48%;
-  transform: rotate(83deg);
-  width: 34%;
-  animation: line-pulse 3.2s ease-in-out 1.1s infinite;
-}
-
-.diagram-ring {
-  border: 2px solid var(--ink);
-  border-radius: 999px;
-  height: 148px;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 148px;
-  z-index: 0;
-}
-
-.diagram-ring::before,
-.diagram-ring::after {
-  background: var(--ink);
-  content: "";
-  height: 12px;
-  position: absolute;
-  width: 12px;
-}
-
-.diagram-ring::before {
-  left: 14px;
-  top: 20px;
-  animation: orbit-square 6.4s linear infinite;
-}
-
-.diagram-ring::after {
-  bottom: 18px;
-  right: 18px;
-  animation: orbit-square 6.4s linear reverse infinite;
+body:has(.home-scroll-page) footer {
+  scroll-snap-align: end;
+  scroll-snap-stop: always;
 }
 
 .stack-strip {
@@ -346,62 +233,6 @@ dd {
 
   to {
     transform: translateX(-50%);
-  }
-}
-
-@keyframes diagram-scan {
-  0%,
-  24% {
-    transform: translateY(-100%);
-  }
-
-  68% {
-    transform: translateY(210%);
-  }
-
-  100% {
-    transform: translateY(210%);
-  }
-}
-
-@keyframes node-jolt {
-  0%,
-  100% {
-    transform: translate(0, 0);
-  }
-
-  45% {
-    transform: translate(0, 0);
-  }
-
-  50% {
-    transform: translate(3px, -3px);
-  }
-
-  56% {
-    transform: translate(-2px, 2px);
-  }
-}
-
-@keyframes line-pulse {
-  0%,
-  100% {
-    opacity: 0.2;
-    transform-origin: left center;
-  }
-
-  45% {
-    opacity: 1;
-  }
-}
-
-@keyframes orbit-square {
-  from {
-    transform: rotate(0deg) translateX(74px) rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg) translateX(74px) rotate(-360deg);
   }
 }
 

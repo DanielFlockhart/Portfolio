@@ -5,6 +5,7 @@ import { FieldValue, type DocumentData } from "firebase-admin/firestore";
 import { projects as fallbackProjects } from "@/lib/site";
 import type { ContactMessage, Project } from "@/lib/types";
 import { getAdminDb } from "@/lib/firebase/admin";
+import { formatFirebaseError } from "@/lib/firebase/errors";
 
 function normaliseProject(slug: string, data: DocumentData): Project | null {
   if (!data.title || !data.summary) return null;
@@ -28,41 +29,51 @@ function normaliseProject(slug: string, data: DocumentData): Project | null {
   };
 }
 
+function publishedFallbackProjects() {
+  return fallbackProjects.filter((project) => project.visibility === "published");
+}
+
+function sortProjects(projects: Project[]) {
+  return projects.sort((a, b) => (a.featuredOrder ?? 999) - (b.featuredOrder ?? 999));
+}
+
+function selectProjects(projects: Project[], options: { featuredOnly?: boolean }) {
+  return sortProjects(projects.filter((project) => (options.featuredOnly ? project.featured : true)));
+}
+
+function mergeProjects(firebaseProjects: Project[]) {
+  const projectsBySlug = new Map(publishedFallbackProjects().map((project) => [project.slug, project]));
+
+  for (const project of firebaseProjects) {
+    projectsBySlug.set(project.slug, project);
+  }
+
+  return Array.from(projectsBySlug.values());
+}
+
 export async function getPortfolioProjects(options: { featuredOnly?: boolean } = {}) {
   const db = getAdminDb();
 
   if (!db) {
-    return fallbackProjects
-      .filter((project) => project.visibility === "published")
-      .filter((project) => (options.featuredOnly ? project.featured : true))
-      .sort((a, b) => (a.featuredOrder ?? 999) - (b.featuredOrder ?? 999));
+    return selectProjects(publishedFallbackProjects(), options);
   }
 
   try {
-    const snapshot = await db
-      .collection("projects")
-      .where("visibility", "==", "published")
-      .orderBy("featuredOrder", "asc")
-      .get();
+    const snapshot = await db.collection("projects").where("visibility", "==", "published").get();
 
     const firebaseProjects = snapshot.docs
       .map((doc) => normaliseProject(doc.id, doc.data()))
       .filter((project): project is Project => Boolean(project));
 
-    const selected = options.featuredOnly
-      ? firebaseProjects.filter((project) => project.featured)
-      : firebaseProjects;
-
-    return selected.length ? selected : fallbackProjects.filter((project) => (options.featuredOnly ? project.featured : true));
+    return selectProjects(mergeProjects(firebaseProjects), options);
   } catch (error) {
     if (process.env.NODE_ENV !== "production") {
-      console.warn("Could not read Firestore projects. Falling back to local portfolio data.", error);
+      console.warn(
+        `Could not read Firestore projects. Falling back to local portfolio data. ${formatFirebaseError(error)}`,
+      );
     }
 
-    return fallbackProjects
-      .filter((project) => project.visibility === "published")
-      .filter((project) => (options.featuredOnly ? project.featured : true))
-      .sort((a, b) => (a.featuredOrder ?? 999) - (b.featuredOrder ?? 999));
+    return selectProjects(publishedFallbackProjects(), options);
   }
 }
 
@@ -78,7 +89,9 @@ export async function getPortfolioProject(slug: string) {
       }
     } catch (error) {
       if (process.env.NODE_ENV !== "production") {
-        console.warn(`Could not read Firestore project ${slug}. Falling back to local data.`, error);
+        console.warn(
+          `Could not read Firestore project ${slug}. Falling back to local data. ${formatFirebaseError(error)}`,
+        );
       }
     }
   }

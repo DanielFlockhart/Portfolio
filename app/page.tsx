@@ -5,7 +5,7 @@ import { ProjectCard } from "@/components/ProjectCard";
 import { Section } from "@/components/Section";
 import { Stat } from "@/components/Stat";
 import { getPortfolioProjects } from "@/lib/firebase/portfolio";
-import { experience, principles, profile, skills } from "@/lib/site";
+import { experience, profile, skillGroups } from "@/lib/site";
 
 export const revalidate = 3600;
 
@@ -17,17 +17,19 @@ const tickerItems = [
   "Full-stack ownership",
 ];
 
+const homeSectionClassName = "home-scroll-section flex min-h-[calc(100svh-4rem)] items-center";
+
 export default async function Home() {
   const featuredProjects = await getPortfolioProjects({ featuredOnly: true });
 
   return (
-    <>
-      <section className="relative overflow-hidden border-b-2 border-black bg-white px-6">
-        <div className="mx-auto grid min-h-[calc(100svh-4rem)] max-w-7xl min-w-0 gap-10 py-12 lg:grid-cols-[minmax(0,1fr)_430px] lg:items-center">
+    <div className="home-scroll-page">
+      <section className="home-scroll-section relative flex min-h-[calc(100svh-4rem)] flex-col overflow-hidden border-b-2 border-black bg-white px-6">
+        <div className="mx-auto grid w-full flex-1 max-w-7xl min-w-0 gap-10 py-12 lg:grid-cols-[minmax(0,1fr)_430px] lg:items-center">
           <div className="min-w-0 max-w-5xl">
             <div className="reveal-up inline-flex border-2 border-black bg-white text-xs font-black uppercase text-black">
-              <span className="border-r-2 border-black bg-black px-3 py-2 text-white">Open</span>
-              <span className="px-3 py-2">AI, software and product roles</span>
+              <span className="border-r-2 border-black bg-black px-3 py-2 text-white">Building</span>
+              <span className="px-3 py-2">AI systems, products and hard things</span>
             </div>
             <p className="reveal-up reveal-delay-1 mt-8 text-sm font-black uppercase text-neutral-700">
               Portfolio / Applied AI / Product Engineering
@@ -41,6 +43,7 @@ export default async function Home() {
             </p>
             <div className="reveal-up reveal-delay-2 mt-8 flex flex-wrap gap-4">
               <ButtonLink href="/projects">View projects</ButtonLink>
+              <ButtonLink href="/achievements" variant="secondary">View achievements</ButtonLink>
               <ButtonLink href="/contact" variant="secondary">Contact me</ButtonLink>
             </div>
             <div className="reveal-up reveal-delay-3 mt-8 flex flex-wrap gap-5">
@@ -51,32 +54,23 @@ export default async function Home() {
             <div className="reveal-up reveal-delay-3 mt-10 grid max-w-full overflow-hidden border-2 border-black bg-white sm:grid-cols-3">
               <Stat value="1st" label="BSc Artificial Intelligence & Computer Science" />
               <Stat value="CTO" label="Co-founded and built a launched travel-tech platform" />
-              <Stat value="57k+" label="Generated molecules analysed in ML research pipeline" />
+              <Stat value="AI" label="Machine learning, product engineering and security-minded systems" />
             </div>
           </div>
 
-          <div className="reveal-up reveal-delay-2 relative min-h-[520px] min-w-0 max-w-full lg:min-h-[620px]" aria-hidden="true">
+          <div className="reveal-up reveal-delay-2 relative min-h-[520px] min-w-0 max-w-full lg:min-h-[620px]">
             <div className="absolute inset-0 translate-x-4 translate-y-4 border-2 border-black bg-black" />
-            <div className="relative flex h-full min-h-[520px] flex-col border-2 border-black bg-white">
-              <div className="flex items-center justify-between border-b-2 border-black px-4 py-3 text-xs font-black uppercase">
-                <span>Live build board</span>
-                <span>DF / 2026</span>
-              </div>
-              <div className="system-diagram relative flex-1 overflow-hidden">
-                <Image src="/system-print.svg" alt="" fill priority sizes="430px" className="object-cover opacity-20" />
-                <span className="diagram-ring" />
-                <span className="diagram-line line-a" />
-                <span className="diagram-line line-b" />
-                <span className="diagram-line line-c" />
-                <span className="diagram-node node-a">Research</span>
-                <span className="diagram-node node-b">Model</span>
-                <span className="diagram-node node-c">Product</span>
-                <span className="diagram-node node-d">Ship</span>
-              </div>
-              <div className="grid grid-cols-3 border-t-2 border-black text-xs font-black uppercase">
-                <div className="border-r-2 border-black p-3">AI</div>
-                <div className="border-r-2 border-black p-3">Web</div>
-                <div className="p-3">Ops</div>
+            <div className="relative h-full min-h-[520px] overflow-hidden border-2 border-black bg-white">
+              <Image
+                src="/daniel-flockhart.jpg"
+                alt="Portrait of Daniel Flockhart"
+                fill
+                priority
+                sizes="(min-width: 1024px) 430px, 100vw"
+                className="object-cover"
+              />
+              <div className="absolute inset-x-0 bottom-0 border-t-2 border-black bg-white px-4 py-3 text-xs font-black uppercase text-black">
+                Daniel Flockhart
               </div>
             </div>
           </div>
@@ -91,18 +85,12 @@ export default async function Home() {
         </div>
       </section>
 
-      <Section eyebrow="How I work" title="A portfolio for more than one application.">
-        <div className="grid border-2 border-black bg-white md:grid-cols-3">
-          {principles.map((principle) => (
-            <div key={principle.title} className="border-b-2 border-black p-6 last:border-b-0 md:border-b-0 md:border-r-2 md:last:border-r-0">
-              <h3 className="text-xl font-black uppercase text-black">{principle.title}</h3>
-              <p className="mt-4 text-sm font-medium leading-6 text-neutral-700">{principle.body}</p>
-            </div>
-          ))}
-        </div>
-      </Section>
-
-      <Section eyebrow="Selected work" title="Projects that show research depth, product ownership and engineering execution.">
+      <Section
+        eyebrow="Selected work"
+        eyebrowSide="right"
+        title="Projects that show research depth, product ownership and engineering execution."
+        className={homeSectionClassName}
+      >
         <div className="grid gap-5 lg:grid-cols-3">
           {featuredProjects.map((project) => (
             <ProjectCard key={project.slug} project={project} />
@@ -110,7 +98,7 @@ export default async function Home() {
         </div>
       </Section>
 
-      <Section eyebrow="Experience" title="Technical work with a bias toward ownership.">
+      <Section eyebrow="Experience" title="Technical work with a bias toward ownership." className={homeSectionClassName}>
         <div className="border-y-2 border-black bg-white">
           {experience.map((item) => (
             <article key={`${item.role}-${item.organisation}`} className="border-b-2 border-black p-6 last:border-b-0">
@@ -134,15 +122,23 @@ export default async function Home() {
         </div>
       </Section>
 
-      <Section eyebrow="Stack" title="Tools I have used to build, test and ship.">
-        <div className="flex flex-wrap gap-2">
-          {skills.map((skill) => (
-            <span key={skill} className="border-2 border-black bg-white px-4 py-2 text-sm font-black uppercase text-black transition hover:-translate-y-0.5 hover:bg-black hover:text-white">
-              {skill}
-            </span>
+      <Section eyebrow="Skills" title="Technical skills, AI knowledge and investigation experience." className={homeSectionClassName}>
+        <div className="grid gap-4 lg:grid-cols-2">
+          {skillGroups.map((group) => (
+            <article key={group.title} className="border-2 border-black bg-white p-5 shadow-[6px_6px_0_#050505]">
+              <h3 className="text-xl font-black uppercase leading-tight text-black">{group.title}</h3>
+              <p className="mt-3 text-sm font-medium leading-6 text-neutral-700">{group.summary}</p>
+              <div className="mt-5 flex flex-wrap gap-2">
+                {group.items.map((item) => (
+                  <span key={item} className="border border-black bg-white px-2 py-1 text-xs font-bold uppercase text-black">
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </article>
           ))}
         </div>
       </Section>
-    </>
+    </div>
   );
 }

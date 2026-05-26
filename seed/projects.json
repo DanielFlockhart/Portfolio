@@ -136,5 +136,208 @@
       }
     ],
     "links": []
+  },
+  {
+    "slug": "reinforcement-learning-cars",
+    "title": "Reinforcement Learning Cars Learning to Drive",
+    "kicker": "Simulation project for autonomous driving behaviour",
+    "summary": "A reinforcement-learning experiment where simulated cars improved their driving behaviour through repeated attempts, reward feedback and parameter tuning.",
+    "description": "Built as an applied AI experiment to explore how agents can learn control policies inside a driving-style simulation. The project focused on the loop between environment design, reward shaping, training stability and visible learning progress as cars moved from poor early behaviour toward more controlled driving.",
+    "category": "AI / Reinforcement Learning",
+    "year": "2024",
+    "status": "Research",
+    "visibility": "published",
+    "featured": false,
+    "featuredOrder": 4,
+    "stack": [
+      "Python",
+      "Reinforcement Learning",
+      "Simulation",
+      "Neural Networks",
+      "Experiment Design"
+    ],
+    "highlights": [
+      "Designed a learning environment where progress could be inspected visually.",
+      "Explored reward shaping, agent behaviour and training iteration rather than a static model demo.",
+      "Used the project to connect AI theory with an interactive control problem."
+    ],
+    "metrics": [
+      {
+        "label": "Domain",
+        "value": "Autonomous agents"
+      },
+      {
+        "label": "Method",
+        "value": "RL"
+      },
+      {
+        "label": "Output",
+        "value": "Driving simulation"
+      }
+    ],
+    "links": []
+  },
+  {
+    "slug": "game-jams",
+    "title": "Game Jams",
+    "kicker": "Small games built under tight creative constraints",
+    "summary": "A collection of short-form game projects made around rapid prototyping, scope control, mechanics, polish and playable outcomes.",
+    "description": "Game jams were a way to practise finishing interactive work quickly: deciding on a small mechanic, building the loop, handling input and feedback, and getting to something playable before the deadline. The work sharpened practical judgement around scope, iteration and user experience.",
+    "category": "Creative Coding",
+    "year": "2021-2024",
+    "status": "Archived",
+    "visibility": "published",
+    "featured": false,
+    "featuredOrder": 5,
+    "stack": [
+      "Game Design",
+      "Prototyping",
+      "JavaScript",
+      "Python",
+      "UI Feedback",
+      "Rapid Iteration"
+    ],
+    "highlights": [
+      "Built playable prototypes around strict time limits and simple mechanics.",
+      "Practised the full loop from idea to interaction design, implementation and polish.",
+      "Used constraints to make clearer tradeoffs about what mattered for a finished game."
+    ],
+    "metrics": [
+      {
+        "label": "Format",
+        "value": "Game jams"
+      },
+      {
+        "label": "Focus",
+        "value": "Playable loops"
+      },
+      {
+        "label": "Pace",
+        "value": "Rapid builds"
+      }
+    ],
+    "links": []
+  },
+  {
+    "slug": "assorted-phone-apps",
+    "title": "Assorted Phone Apps",
+    "kicker": "Mobile prototypes and app experiments",
+    "summary": "A set of smaller phone-app builds exploring mobile interfaces, user flows, data capture, notifications and practical product ideas.",
+    "description": "These projects sit around the edges of larger mobile work: lightweight app ideas, interface experiments and prototypes for testing how a product might feel on a phone. They helped develop a stronger sense of mobile navigation, compact UI design and the tradeoffs between prototype speed and production quality.",
+    "category": "Mobile Apps",
+    "year": "2022-2025",
+    "status": "Prototype",
+    "visibility": "published",
+    "featured": false,
+    "featuredOrder": 6,
+    "stack": [
+      "React Native",
+      "Mobile UI",
+      "Firebase",
+      "APIs",
+      "Product Prototyping"
+    ],
+    "highlights": [
+      "Explored phone-first interaction patterns and compact interface design.",
+      "Built prototypes around real product ideas instead of isolated screen mockups.",
+      "Carried lessons from small mobile builds into larger web and app product work."
+    ],
+    "metrics": [
+      {
+        "label": "Platform",
+        "value": "Mobile"
+      },
+      {
+        "label": "Output",
+        "value": "Prototypes"
+      },
+      {
+        "label": "Focus",
+        "value": "UX flows"
+      }
+    ],
+    "links": []
+  },
+  {
+    "slug": "other-ai-projects",
+    "title": "Other AI Projects",
+    "kicker": "Smaller applied-AI experiments and prototypes",
+    "summary": "Additional AI work spanning model experiments, automation ideas, classification tasks, LLM workflows and applied machine-learning prototypes.",
+    "description": "Not every AI build needs to become a large case study. This entry groups smaller experiments where the main value was testing a technique, exploring a workflow, learning a model family or proving whether an idea was technically useful enough to continue.",
+    "category": "AI / Experiments",
+    "year": "2022-2026",
+    "status": "Prototype",
+    "visibility": "published",
+    "featured": false,
+    "featuredOrder": 7,
+    "stack": [
+      "Python",
+      "Machine Learning",
+      "LLMs",
+      "Automation",
+      "Data Analysis",
+      "APIs"
+    ],
+    "highlights": [
+      "Used smaller experiments to build intuition before committing to larger systems.",
+      "Tested applied-AI ideas across classification, automation and language-model workflows.",
+      "Focused on practical usefulness, failure modes and iteration speed."
+    ],
+    "metrics": [
+      {
+        "label": "Scope",
+        "value": "Mixed AI"
+      },
+      {
+        "label": "Output",
+        "value": "Experiments"
+      },
+      {
+        "label": "Focus",
+        "value": "Applied use"
+      }
+    ],
+    "links": []
+  },
+  {
+    "slug": "cyber-security-projects",
+    "title": "Cyber Security Projects",
+    "kicker": "Security-focused builds, labs and applied hardening work",
+    "summary": "A grouped entry for security projects spanning web application security, scripting, network fundamentals, threat modelling and defensive engineering.",
+    "description": "These projects collect practical cyber security work around understanding attack surfaces, testing assumptions and building safer systems. The focus was on applying security thinking to real engineering contexts: how software fails, how systems expose risk and how to design more defensible products.",
+    "category": "Cyber Security",
+    "year": "2023-2026",
+    "status": "Prototype",
+    "visibility": "published",
+    "featured": false,
+    "featuredOrder": 8,
+    "stack": [
+      "Cyber Security",
+      "Python",
+      "Linux",
+      "Web Security",
+      "Networking",
+      "Threat Modelling"
+    ],
+    "highlights": [
+      "Explored security from both builder and attacker perspectives to understand real failure modes.",
+      "Worked through practical exercises around web vulnerabilities, networking and system hardening.",
+      "Applied security lessons back into full-stack product decisions and deployment habits."
+    ],
+    "metrics": [
+      {
+        "label": "Domain",
+        "value": "Security"
+      },
+      {
+        "label": "Scope",
+        "value": "Labs + builds"
+      },
+      {
+        "label": "Focus",
+        "value": "Defensible systems"
+      }
+    ],
+    "links": []
   }
 ]

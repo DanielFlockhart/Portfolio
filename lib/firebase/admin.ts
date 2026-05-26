@@ -3,6 +3,8 @@ import "server-only";
 import { cert, getApps, initializeApp } from "firebase-admin/app";
 import { getFirestore, type Firestore } from "firebase-admin/firestore";
 
+import { formatFirebaseError } from "@/lib/firebase/errors";
+
 let cachedDb: Firestore | null | undefined;
 
 function parseFirebaseConfigProjectId() {
@@ -21,6 +23,16 @@ function getPrivateKey() {
   return process.env.FIREBASE_PRIVATE_KEY?.replace(/\\n/g, "\n");
 }
 
+function canUseApplicationDefaultCredentials() {
+  return Boolean(
+    process.env.NODE_ENV === "production" ||
+      process.env.FIREBASE_CONFIG ||
+      process.env.GOOGLE_APPLICATION_CREDENTIALS ||
+      process.env.FIRESTORE_EMULATOR_HOST ||
+      process.env.FIREBASE_USE_APPLICATION_DEFAULT === "true",
+  );
+}
+
 export function getAdminDb() {
   if (cachedDb !== undefined) return cachedDb;
 
@@ -35,10 +47,13 @@ export function getAdminDb() {
           credential: cert({ projectId, clientEmail, privateKey }),
           projectId,
         });
-      } else {
+      } else if (canUseApplicationDefaultCredentials()) {
         // On Firebase App Hosting, FIREBASE_CONFIG is automatically provided and the Admin SDK
         // can initialise with the runtime service account.
-        initializeApp();
+        initializeApp(projectId ? { projectId } : undefined);
+      } else {
+        cachedDb = null;
+        return null;
       }
     }
 
@@ -46,7 +61,9 @@ export function getAdminDb() {
     return cachedDb;
   } catch (error) {
     if (process.env.NODE_ENV !== "production") {
-      console.warn("Firebase Admin SDK is not configured. Falling back to local portfolio data.", error);
+      console.warn(
+        `Firebase Admin SDK is not configured. Falling back to local portfolio data. ${formatFirebaseError(error)}`,
+      );
     }
 
     cachedDb = null;

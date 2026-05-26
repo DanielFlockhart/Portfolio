@@ -52,7 +52,3 @@ Written by `/api/contact` through Firebase Admin SDK.
 ```
 
 Client-side reads and writes are blocked by `firestore.rules`. Keep it that way unless you add Firebase Auth, App Check and rate limiting.
-
-## Collection: `writing` optional
-
-Not wired into the template yet. Start with local writing notes in `lib/site.ts`; move to Firestore only once you are publishing regularly.
