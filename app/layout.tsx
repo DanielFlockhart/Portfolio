@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 
+import { FirebaseAnalytics } from "@/components/FirebaseAnalytics";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { profile, SITE_URL } from "@/lib/site";
@@ -51,6 +52,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             <main>{children}</main>
             <Footer />
           </div>
+          <FirebaseAnalytics />
         </div>
       </body>
     </html>
