@@ -7,6 +7,31 @@ import type { ContactMessage, Project } from "@/lib/types";
 import { getAdminDb } from "@/lib/firebase/admin";
 import { formatFirebaseError } from "@/lib/firebase/errors";
 
+const localContentOverrideSlugs = new Set([
+  "matched-stay",
+  "ai-drug-discovery-pipeline",
+  "cyber-security-projects",
+  "game-jams",
+  "assorted-phone-apps",
+  "reinforcement-learning-cars",
+  "digital-chemistry-research",
+  "other-ai-projects",
+]);
+
+function normaliseSpotlight(data: DocumentData): Project["spotlight"] {
+  if (!data.spotlight || typeof data.spotlight !== "object") return undefined;
+
+  const spotlight = data.spotlight as DocumentData;
+  if (!spotlight.title || !spotlight.body) return undefined;
+
+  return {
+    eyebrow: String(spotlight.eyebrow ?? "Project focus"),
+    title: String(spotlight.title),
+    body: String(spotlight.body),
+    points: Array.isArray(spotlight.points) ? spotlight.points.map(String) : undefined,
+  };
+}
+
 function normaliseProject(slug: string, data: DocumentData): Project | null {
   if (!data.title || !data.summary) return null;
 
@@ -25,12 +50,20 @@ function normaliseProject(slug: string, data: DocumentData): Project | null {
     stack: Array.isArray(data.stack) ? data.stack.map(String) : [],
     highlights: Array.isArray(data.highlights) ? data.highlights.map(String) : [],
     metrics: Array.isArray(data.metrics) ? data.metrics : [],
+    spotlight: normaliseSpotlight(data),
     links: Array.isArray(data.links) ? data.links : [],
   };
 }
 
 function publishedFallbackProjects() {
   return fallbackProjects.filter((project) => project.visibility === "published");
+}
+
+function localProjectOverride(project: Project) {
+  const fallback = fallbackProjects.find((item) => item.slug === project.slug);
+  if (!fallback) return project;
+  if (localContentOverrideSlugs.has(project.slug)) return { ...project, ...fallback };
+  return { ...project, status: fallback.status };
 }
 
 function sortProjects(projects: Project[]) {
@@ -45,7 +78,7 @@ function mergeProjects(firebaseProjects: Project[]) {
   const projectsBySlug = new Map(publishedFallbackProjects().map((project) => [project.slug, project]));
 
   for (const project of firebaseProjects) {
-    projectsBySlug.set(project.slug, project);
+    projectsBySlug.set(project.slug, localProjectOverride(project));
   }
 
   return Array.from(projectsBySlug.values());
@@ -85,7 +118,7 @@ export async function getPortfolioProject(slug: string) {
       const doc = await db.collection("projects").doc(slug).get();
       if (doc.exists) {
         const project = normaliseProject(doc.id, doc.data() ?? {});
-        if (project?.visibility === "published") return project;
+        if (project?.visibility === "published") return localProjectOverride(project);
       }
     } catch (error) {
       if (process.env.NODE_ENV !== "production") {

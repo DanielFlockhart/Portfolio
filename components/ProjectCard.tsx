@@ -1,6 +1,8 @@
 import Link from "next/link";
 
+import { projectStatusClassName } from "@/lib/projectStatus";
 import type { Project } from "@/lib/types";
+import { cn } from "@/lib/utils";
 
 export function ProjectCard({ project, starred = false }: { project: Project; starred?: boolean }) {
   return (
@@ -23,7 +25,9 @@ export function ProjectCard({ project, starred = false }: { project: Project; st
               ★
             </span>
           ) : null}
-          <span className="border-2 border-black bg-white px-2 py-1 text-xs font-black uppercase text-black">{project.status}</span>
+          <span className={cn("border-2 border-black px-2 py-1 text-xs font-black uppercase", projectStatusClassName(project.status))}>
+            {project.status}
+          </span>
         </div>
       </div>
 

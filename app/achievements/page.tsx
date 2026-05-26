@@ -6,12 +6,12 @@ import { achievements } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Achievements",
-  description: "Personal achievements across endurance sport, combat sport and performance by Daniel Flockhart.",
+  description: "Personal achievements across endurance sport, combat sport, performance, academics and entrepreneurship by Daniel Flockhart.",
 };
 
 export default function AchievementsPage() {
   return (
-    <Section eyebrow="Achievements" title="Personal achievements outside software and AI." className="min-h-[calc(100svh-4rem)] pt-20">
+    <Section eyebrow="Achievements" title="Personal milestones across sport, performance, study and business." className="min-h-[calc(100svh-4rem)] pt-20">
       <p className="mb-10 max-w-3xl border-l-8 border-black bg-white py-2 pl-5 text-lg font-medium leading-8 text-neutral-700">
         A short record of demanding things that shaped how I handle pressure, discipline, performance and long-term effort.
       </p>
@@ -34,7 +34,7 @@ export default function AchievementsPage() {
             <p className="mt-5 text-sm font-medium leading-6 text-neutral-700">{achievement.summary}</p>
 
             <ul className="mt-6 space-y-3">
-              {achievement.details.map((detail) => (
+              {achievement.details.slice(0, 3).map((detail) => (
                 <li key={detail} className="flex gap-3 text-sm font-medium leading-6 text-neutral-700">
                   <span className="mt-2 size-2 shrink-0 bg-black" />
                   {detail}

@@ -19,8 +19,16 @@ const tickerItems = [
 
 const homeSectionClassName = "home-scroll-section flex min-h-[calc(100svh-4rem)] items-center";
 
+function prioritiseFeaturedProjects(projects: Awaited<ReturnType<typeof getPortfolioProjects>>) {
+  return [...projects].sort((a, b) => {
+    if (a.slug === "matched-stay") return -1;
+    if (b.slug === "matched-stay") return 1;
+    return 0;
+  });
+}
+
 export default async function Home() {
-  const featuredProjects = await getPortfolioProjects({ featuredOnly: true });
+  const featuredProjects = prioritiseFeaturedProjects(await getPortfolioProjects({ featuredOnly: true }));
 
   return (
     <div className="home-scroll-page">
@@ -34,7 +42,7 @@ export default async function Home() {
             <p className="reveal-up reveal-delay-1 mt-8 text-sm font-black uppercase text-neutral-700">
               Portfolio / Applied AI / Product Engineering
             </p>
-            <h1 className="reveal-up reveal-delay-1 mt-4 max-w-5xl break-words text-5xl font-black uppercase leading-[0.92] text-black sm:text-7xl lg:text-[7.75rem] xl:text-[8rem]">
+            <h1 className="reveal-up reveal-delay-1 mt-4 max-w-5xl break-words text-5xl font-black uppercase leading-[0.92] text-black sm:text-7xl lg:text-[7.25rem] xl:text-[7.75rem]">
               Daniel
               <span className="text-outline block">Flockhart</span>
             </h1>
@@ -91,6 +99,9 @@ export default async function Home() {
         title="Projects that show research depth, product ownership and engineering execution."
         className={homeSectionClassName}
       >
+        <div className="mb-8">
+          <ButtonLink href="/projects" variant="secondary">View all projects</ButtonLink>
+        </div>
         <div className="grid gap-5 lg:grid-cols-3">
           {featuredProjects.map((project) => (
             <ProjectCard key={project.slug} project={project} />

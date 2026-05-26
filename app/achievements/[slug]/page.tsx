@@ -40,10 +40,20 @@ export default async function AchievementDetailPage({ params }: AchievementPageP
         <p className="mt-10 border-l-8 border-black pl-4 text-xs font-black uppercase text-neutral-700">{achievement.category}</p>
         <h1 className="mt-5 max-w-5xl text-5xl font-black uppercase leading-tight text-black sm:text-7xl">{achievement.title}</h1>
         <p className="mt-6 max-w-3xl text-lg font-medium leading-8 text-neutral-700">{achievement.summary}</p>
+        {achievement.metrics && achievement.metrics.length > 0 ? (
+          <div className="mt-8 grid max-w-5xl gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            {achievement.metrics.map((metric) => (
+              <div key={`${metric.label}-${metric.value}`} className="border-2 border-black bg-white p-4 shadow-[5px_5px_0_#050505]">
+                <p className="text-xs font-black uppercase text-neutral-600">{metric.label}</p>
+                <p className="mt-2 text-2xl font-black uppercase text-black">{metric.value}</p>
+              </div>
+            ))}
+          </div>
+        ) : null}
       </section>
 
       <Section className="min-h-[calc(100svh-4rem)]">
-        <article className="max-w-4xl border-2 border-black bg-white p-6 shadow-[10px_10px_0_#050505] sm:p-8">
+        <article className="max-w-5xl border-2 border-black bg-white p-6 shadow-[10px_10px_0_#050505] sm:p-8">
           <dl className="grid gap-4 border-b-2 border-black pb-6 sm:grid-cols-2">
             <div>
               <dt className="text-xs font-black uppercase text-neutral-600">Period</dt>
@@ -54,6 +64,19 @@ export default async function AchievementDetailPage({ params }: AchievementPageP
               <dd className="mt-2 text-2xl font-black uppercase text-black">{achievement.category}</dd>
             </div>
           </dl>
+
+          {achievement.context && achievement.context.length > 0 ? (
+            <section className="border-b-2 border-black py-8">
+              <h2 className="text-2xl font-black uppercase text-black">Context</h2>
+              <div className="mt-5 space-y-4">
+                {achievement.context.map((paragraph) => (
+                  <p key={paragraph} className="max-w-3xl text-sm font-medium leading-6 text-neutral-700">
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
+            </section>
+          ) : null}
 
           <h2 className="mt-8 text-2xl font-black uppercase text-black">Key details</h2>
           <ul className="mt-5 space-y-3">

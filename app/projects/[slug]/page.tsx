@@ -4,7 +4,9 @@ import { notFound } from "next/navigation";
 import { ButtonLink, InlineLink } from "@/components/ButtonLink";
 import { Section } from "@/components/Section";
 import { getPortfolioProject } from "@/lib/firebase/portfolio";
+import { projectStatusClassName } from "@/lib/projectStatus";
 import { projects as fallbackProjects } from "@/lib/site";
+import { cn } from "@/lib/utils";
 
 type ProjectPageProps = {
   params: Promise<{ slug: string }>;
@@ -60,7 +62,11 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                 </div>
                 <div className="flex justify-between gap-4 border-b-2 border-black pb-3">
                   <dt className="font-bold text-neutral-600">Status</dt>
-                  <dd className="font-black text-black">{project.status}</dd>
+                  <dd>
+                    <span className={cn("border-2 border-black px-2 py-1 text-xs font-black uppercase", projectStatusClassName(project.status))}>
+                      {project.status}
+                    </span>
+                  </dd>
                 </div>
                 <div className="flex justify-between gap-4">
                   <dt className="font-bold text-neutral-600">Category</dt>
@@ -83,6 +89,23 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
 
           <article className="border-2 border-black bg-white p-6 shadow-[10px_10px_0_#050505] sm:p-8">
             <p className="text-lg font-medium leading-8 text-neutral-700">{project.description}</p>
+
+            {project.spotlight ? (
+              <section className="mt-8 border-l-8 border-black bg-amber-100 p-5">
+                <p className="text-xs font-black uppercase text-neutral-700">{project.spotlight.eyebrow}</p>
+                <h2 className="mt-3 text-2xl font-black uppercase leading-tight text-black">{project.spotlight.title}</h2>
+                <p className="mt-4 text-sm font-medium leading-6 text-neutral-700">{project.spotlight.body}</p>
+                {project.spotlight.points?.length ? (
+                  <ul className="mt-5 grid gap-3 sm:grid-cols-3">
+                    {project.spotlight.points.map((point) => (
+                      <li key={point} className="border-2 border-black bg-white p-3 text-xs font-black uppercase leading-5 text-black">
+                        {point}
+                      </li>
+                    ))}
+                  </ul>
+                ) : null}
+              </section>
+            ) : null}
 
             <div className="mt-10 grid gap-3 sm:grid-cols-3">
               {project.metrics.map((metric) => (

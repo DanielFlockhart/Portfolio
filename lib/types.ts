@@ -9,6 +9,13 @@ export type Metric = {
   value: string;
 };
 
+export type ProjectSpotlight = {
+  eyebrow: string;
+  title: string;
+  body: string;
+  points?: string[];
+};
+
 export type Project = {
   slug: string;
   title: string;
@@ -24,6 +31,7 @@ export type Project = {
   stack: string[];
   highlights: string[];
   metrics: Metric[];
+  spotlight?: ProjectSpotlight;
   links: LinkItem[];
 };
 
@@ -42,6 +50,12 @@ export type Achievement = {
   period: string;
   summary: string;
   details: string[];
+  metrics?: Array<{
+    label: string;
+    value: string;
+  }>;
+  context?: string[];
+  takeaways?: string[];
 };
 
 export type ContactMessage = {
