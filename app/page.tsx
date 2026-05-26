@@ -37,7 +37,7 @@ export default async function Home() {
           <div className="min-w-0 max-w-5xl">
             <div className="reveal-up inline-flex border-2 border-black bg-white text-xs font-black uppercase text-black">
               <span className="border-r-2 border-black bg-black px-3 py-2 text-white">Building</span>
-              <span className="px-3 py-2">AI systems, products and hard things</span>
+              <span className="px-3 py-2">AI systems and product engineering</span>
             </div>
             <p className="reveal-up reveal-delay-1 mt-8 text-sm font-black uppercase text-neutral-700">
               Portfolio / Applied AI / Product Engineering
@@ -47,7 +47,7 @@ export default async function Home() {
               <span className="text-outline block">Flockhart</span>
             </h1>
             <p className="reveal-up reveal-delay-2 mt-6 max-w-2xl break-words text-lg font-medium leading-8 text-neutral-700">
-              {profile.description} The through-line is simple: turn ambiguous, technical problems into working systems people can actually use.
+              {profile.description} The through-line is turning ambiguous technical problems into working systems people can actually use.
             </p>
             <div className="reveal-up reveal-delay-2 mt-8 flex flex-wrap gap-4">
               <ButtonLink href="/projects">View projects</ButtonLink>

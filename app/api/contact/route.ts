@@ -42,6 +42,9 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ ok: true, ...result });
   } catch (error) {
     console.error("Contact message failed", error);
-    return NextResponse.json({ ok: false, error: "Could not save message." }, { status: 500 });
+    return NextResponse.json(
+      { ok: false, error: "I could not send this through the form. Please email me directly using the address on this page." },
+      { status: 500 },
+    );
   }
 }

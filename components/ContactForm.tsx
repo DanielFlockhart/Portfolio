@@ -28,19 +28,23 @@ export function ContactForm() {
       const result = (await response.json()) as { ok?: boolean; saved?: boolean; error?: string };
 
       if (!response.ok || !result.ok) {
-        throw new Error(result.error ?? "Something went wrong.");
+        throw new Error(result.error ?? "I could not send this through the form. Please email me directly using the address above.");
       }
 
       setStatus("success");
       setMessage(
         result.saved
           ? "Message saved. I will get back to you soon."
-          : "Message validated, but Firebase is not configured yet. Add Firebase environment variables before relying on this form.",
+          : "I could not save this through the form. Please email me directly using the address above.",
       );
       setForm(initialForm);
     } catch (error) {
       setStatus("error");
-      setMessage(error instanceof Error ? error.message : "Something went wrong.");
+      setMessage(
+        error instanceof Error
+          ? error.message
+          : "I could not send this through the form. Please email me directly using the address above.",
+      );
     }
   }
 

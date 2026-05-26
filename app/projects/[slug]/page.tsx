@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { ButtonLink, InlineLink } from "@/components/ButtonLink";
 import { Section } from "@/components/Section";
 import { getPortfolioProject } from "@/lib/firebase/portfolio";
-import { projectStatusClassName } from "@/lib/projectStatus";
+import { projectStackTagClassName, projectStatusClassName } from "@/lib/projectStatus";
 import { projects as fallbackProjects } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
@@ -13,7 +13,9 @@ type ProjectPageProps = {
 };
 
 export async function generateStaticParams() {
-  return fallbackProjects.map((project) => ({ slug: project.slug }));
+  return fallbackProjects
+    .filter((project) => project.visibility === "published")
+    .map((project) => ({ slug: project.slug }));
 }
 
 export async function generateMetadata({ params }: ProjectPageProps): Promise<Metadata> {
@@ -79,7 +81,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
               <p className="text-xs font-black uppercase text-neutral-700">Stack</p>
               <div className="mt-5 flex flex-wrap gap-2">
                 {project.stack.map((tech) => (
-                  <span key={tech} className="border border-black bg-white px-2 py-1 text-xs font-bold uppercase text-black">
+                  <span key={tech} className={cn("border border-black px-2 py-1 text-xs font-bold uppercase", projectStackTagClassName(tech))}>
                     {tech}
                   </span>
                 ))}

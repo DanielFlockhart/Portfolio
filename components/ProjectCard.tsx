@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { projectStatusClassName } from "@/lib/projectStatus";
+import { projectStackTagClassName, projectStatusClassName } from "@/lib/projectStatus";
 import type { Project } from "@/lib/types";
 import { cn } from "@/lib/utils";
 
@@ -35,7 +35,7 @@ export function ProjectCard({ project, starred = false }: { project: Project; st
 
       <div className="relative z-10 mt-5 flex flex-wrap gap-2">
         {project.stack.slice(0, 6).map((tech) => (
-          <span key={tech} className="border border-black bg-white px-2 py-1 text-xs font-bold uppercase text-black">
+          <span key={tech} className={cn("border border-black px-2 py-1 text-xs font-bold uppercase", projectStackTagClassName(tech))}>
             {tech}
           </span>
         ))}
@@ -44,7 +44,7 @@ export function ProjectCard({ project, starred = false }: { project: Project; st
       <div className="relative z-10 mt-6 flex flex-col gap-3 border-t-2 border-black pt-5 sm:flex-row sm:items-center sm:justify-between">
         <span className="text-sm font-black text-black">{project.year}</span>
         <span className="text-sm font-black uppercase text-black transition group-hover:translate-x-1">
-          View case study -&gt;
+          View project -&gt;
         </span>
       </div>
     </Link>

@@ -18,6 +18,8 @@ const localContentOverrideSlugs = new Set([
   "other-ai-projects",
 ]);
 
+const hiddenProjectSlugs = new Set(["portfolio-platform"]);
+
 function normaliseSpotlight(data: DocumentData): Project["spotlight"] {
   if (!data.spotlight || typeof data.spotlight !== "object") return undefined;
 
@@ -56,7 +58,7 @@ function normaliseProject(slug: string, data: DocumentData): Project | null {
 }
 
 function publishedFallbackProjects() {
-  return fallbackProjects.filter((project) => project.visibility === "published");
+  return fallbackProjects.filter((project) => project.visibility === "published" && !hiddenProjectSlugs.has(project.slug));
 }
 
 function localProjectOverride(project: Project) {
@@ -78,6 +80,7 @@ function mergeProjects(firebaseProjects: Project[]) {
   const projectsBySlug = new Map(publishedFallbackProjects().map((project) => [project.slug, project]));
 
   for (const project of firebaseProjects) {
+    if (hiddenProjectSlugs.has(project.slug)) continue;
     projectsBySlug.set(project.slug, localProjectOverride(project));
   }
 
@@ -111,6 +114,8 @@ export async function getPortfolioProjects(options: { featuredOnly?: boolean } =
 }
 
 export async function getPortfolioProject(slug: string) {
+  if (hiddenProjectSlugs.has(slug)) return null;
+
   const db = getAdminDb();
 
   if (db) {

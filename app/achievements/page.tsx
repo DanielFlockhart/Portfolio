@@ -13,7 +13,7 @@ export default function AchievementsPage() {
   return (
     <Section eyebrow="Achievements" title="Personal milestones across sport, performance, study and business." className="min-h-[calc(100svh-4rem)] pt-20">
       <p className="mb-10 max-w-3xl border-l-8 border-black bg-white py-2 pl-5 text-lg font-medium leading-8 text-neutral-700">
-        A short record of demanding things that shaped how I handle pressure, discipline, performance and long-term effort.
+        A concise record of demanding milestones that shaped how I handle pressure, discipline, performance and long-term effort.
       </p>
 
       <div className="grid gap-5 lg:grid-cols-3">

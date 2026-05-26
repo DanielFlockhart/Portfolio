@@ -37,7 +37,7 @@
     ],
     "highlights": [
       "Designed an end-to-end research pipeline rather than an isolated model experiment, covering dataset curation, embedding, LLM augmentation, latent compression, generation, decoding, classifier ranking and novelty analysis.",
-      "Processed a hand-curated dataset of roughly 2,700 cognitive-related molecules alongside ZINC 250K SMILES, removing duplicate or chemically invalid molecules with RDKit checks and SMILES length filtering.",
+      "Processed a hand-curated dataset of approximately 2,700 cognitive-related molecules alongside ZINC 250K SMILES, removing duplicate or chemically invalid molecules with RDKit checks and SMILES length filtering.",
       "Used ChemBERTa to convert canonical SMILES into 768-dimensional molecular embeddings, then validated representational structure with PCA, t-SNE and K-means clusters.",
       "Used OpenAI models as a structured data augmentation layer for pharmacological effect and molecular class labels, then validated sample predictions against known molecules including methylphenidate, oxymorphone and tramadol.",
       "Trained an autoencoder over combined molecule, effect and class vectors, improving latent-space cluster separation compared with the original ChemBERTa vectors.",
@@ -75,7 +75,7 @@
     "spotlight": {
       "eyebrow": "Research architecture",
       "title": "End-to-end generative molecule pipeline",
-      "body": "The work tied together representation learning, LLM-assisted labelling, supervised learning, reinforcement learning, cheminformatics validation and a usable web interface so the whole discovery workflow could be tested as a pipeline rather than as disconnected model demos.",
+      "body": "The work tied together representation learning, LLM-assisted labelling, supervised learning, reinforcement learning, cheminformatics validation and a usable web interface so the discovery workflow could be tested as an integrated pipeline rather than isolated proofs of concept.",
       "points": [
         "SMILES to ChemBERTa to autoencoder latent space",
         "Supervised transformer to RL and genetic fine-tuning",
@@ -100,7 +100,7 @@
     "title": "Matched Stay",
     "kicker": "Middleware platform for complex workforce accommodation and disrupted-travel sourcing",
     "summary": "An AI-assisted web and mobile travel-tech platform for sourcing, negotiating and managing complex workforce accommodation, then turning supplier responses into governed offers, approvals and booking records.",
-    "description": "Co-founded and led technical development of Matched Stay, a middleware platform for non-standard corporate accommodation: long stays, multi-room projects, rotating cohorts, phased sites, crisis response and aviation disruption. The AI negotiation layer is the key technical wedge: LLM-assisted and agentic workflows target suppliers over email and voice, capture unstructured responses, and normalise rates, terms, availability, room mix, cancellation, inclusions and policy constraints into comparable offers. The product sits upstream of a client's normal travel stack, turning request intake into supplier outreach, negotiated options and structured approvals. The downstream strategy is to bridge confirmed bookings back into TMC/GDS records so duty of care, itinerary visibility, reporting and reconciliation remain intact.",
+    "description": "Co-founded and led technical development of Matched Stay, a middleware platform for non-standard corporate accommodation: long stays, multi-room projects, rotating cohorts, phased sites, crisis response and aviation disruption. The AI negotiation layer is the core technical differentiator: LLM-assisted and agentic workflows target suppliers over email and voice, capture unstructured responses, and normalise rates, terms, availability, room mix, cancellation, inclusions and policy constraints into comparable offers. The product sits upstream of a client's normal travel stack, turning request intake into supplier outreach, negotiated options and structured approvals. The downstream strategy is to bridge confirmed bookings back into TMC/GDS records so duty of care, itinerary visibility, reporting and reconciliation remain intact.",
     "category": "Startup / Full-stack Product",
     "year": "2023\u2014Present",
     "status": "Live",
@@ -129,7 +129,7 @@
       "Used LLM-assisted extraction and normalisation to convert unstructured supplier replies into comparable offers covering rates, terms, availability, room mix, cancellation terms, inclusions and constraints.",
       "Built workflows around accommodation request intake, supplier/property sourcing, offer comparison, approvals and booking management.",
       "Shaped the platform as an upstream sourcing layer that can bridge confirmed bookings back into the corporate travel record for duty of care and reconciliation.",
-      "Worked on hard accommodation use cases including workforce projects, phased stays, rotating traveller cohorts, crisis response and aviation disruption.",
+      "Worked on complex accommodation use cases including workforce projects, phased stays, rotating traveller cohorts, crisis response and aviation disruption.",
       "Balanced engineering execution with pilot discovery, investor conversations, launch/testing events and business validation."
     ],
     "metrics": [
@@ -174,8 +174,8 @@
     "slug": "digital-chemistry-research",
     "title": "Digital Chemistry Research Internship",
     "kicker": "Computer vision and ML for molecular skeletons",
-    "summary": "University of Birmingham research work similar in direction to the later drug-discovery dissertation, but focused more tightly on computer vision, molecular skeleton representations and ML architectures for digital chemistry.",
-    "description": "Worked with University of Birmingham researchers on machine-learning approaches for digital chemistry. The work was conceptually related to the later AI drug-discovery dissertation because it explored how ML could represent and reason about molecular structures, but the internship leaned much more toward computer vision: molecular skeleton representations, image-like structural inputs, autoencoder-style experimentation and visual validation of learned representations. The project involved testing architectures, communicating results to technical domain experts and producing recommendations for future research.",
+    "summary": "University of Birmingham research work that preceded the later drug-discovery dissertation, with a tighter focus on computer vision, molecular skeleton representations and ML architectures for digital chemistry.",
+    "description": "Worked with University of Birmingham researchers on machine-learning approaches for digital chemistry. The work was conceptually related to the later AI drug-discovery dissertation because it explored how ML could represent and reason about molecular structures, while the internship leaned further toward computer vision: molecular skeleton representations, image-like structural inputs, autoencoder-style experimentation and visual validation of learned representations. The project involved testing architectures, communicating results to technical domain experts and producing recommendations for future research.",
     "category": "Research Internship",
     "year": "2023",
     "status": "Research",
@@ -229,7 +229,7 @@
     "title": "Reinforcement Learning Cars Learning to Drive",
     "kicker": "A-Level OCR Computer Science programming project built in Unity",
     "summary": "An A-Level OCR Computer Science programming project where cars learned to navigate a track using custom C# neural networks and reinforcement learning inside Unity.",
-    "description": "Built as an A-Level OCR Computer Science programming project, this Unity simulation trained cars to navigate around a track using home-programmed feed-forward neural networks and reinforcement learning rather than third-party ML libraries. The project combined car physics, sensor-style inputs, reward feedback, model loading and saving, UI buttons and visual training feedback. It was accompanied by a roughly 50,000-word written project explaining how the system worked and how it was developed, although the repository itself lacks full formal documentation because that file was too large to include.",
+    "description": "Built as an A-Level OCR Computer Science programming project, this Unity simulation trained cars to navigate around a track using custom-built feed-forward neural networks and reinforcement learning rather than third-party ML libraries. The project combined car physics, sensor-style inputs, reward feedback, model loading and saving, training controls and visual feedback. It was accompanied by an approximately 50,000-word project report explaining the system design, development process and evaluation.",
     "category": "AI / Reinforcement Learning",
     "year": "A-Level OCR",
     "status": "Archived",
@@ -250,7 +250,7 @@
       "Built the car physics, driving simulation and track-navigation environment in Unity.",
       "Implemented feed-forward neural networks and reinforcement learning logic manually in C# using default Unity libraries.",
       "Added model loading and saving so trained networks could be reused between sessions.",
-      "Built UI buttons and visual feedback for running training and inspecting whether cars were learning valid track behaviour.",
+      "Built training controls and visual feedback for inspecting whether cars were learning valid track behaviour.",
       "Produced a substantial written A-Level project report explaining the system and development process."
     ],
     "metrics": [
@@ -284,7 +284,7 @@
     "title": "Game Jams",
     "kicker": "Ludum Dare prototypes built with Unity, C# and Blender",
     "summary": "A set of Ludum Dare game jam projects from 2020-2021, focused on building playable Unity prototypes with C# gameplay logic and Blender-made assets under tight deadlines.",
-    "description": "These game jams were primarily Ludum Dare projects built in Unity between 2020 and 2021. The work involved writing gameplay systems in C#, creating simple 3D assets in Blender, scoping ideas down to something shippable, then building enough interaction, feedback and polish to make each prototype playable before the deadline.",
+    "description": "These game jams were primarily Ludum Dare projects built in Unity between 2020 and 2021. The work involved writing gameplay systems in C#, creating lightweight 3D assets in Blender, scoping ideas down to something shippable, then building enough interaction, feedback and polish to make each prototype playable before the deadline.",
     "category": "Creative Coding",
     "year": "2020-2021",
     "status": "Archived",
@@ -303,7 +303,7 @@
     "highlights": [
       "Built Unity prototypes for Ludum Dare game jams under strict time limits.",
       "Used C# for gameplay logic, player interaction, game loops and feedback.",
-      "Created or adapted simple Blender assets to support the visual direction of the prototypes.",
+      "Created or adapted lightweight Blender assets to support the visual direction of the prototypes.",
       "Practised scoping ideas aggressively so the result was playable by the deadline."
     ],
     "metrics": [
@@ -325,9 +325,9 @@
   {
     "slug": "assorted-phone-apps",
     "title": "Assorted Phone Apps",
-    "kicker": "Simple mobile games and apps released over time, now taken down",
-    "summary": "A long-running collection of simple mobile games and app experiments from 2017 onward, including a couple of public releases that are no longer live.",
-    "description": "This entry groups early and occasional phone-app work from 2017 to current: small games, simple app ideas and lightweight experiments built to learn mobile flows, publishing, UI constraints and fast product iteration. A couple of these were released publicly at the time, but they have since been taken down, so this is kept as a broad archive rather than a set of active live products.",
+    "kicker": "Archived mobile games and app experiments",
+    "summary": "A long-running collection of mobile games and app experiments from 2017 onward, including public releases that have since been retired from distribution.",
+    "description": "This entry groups early and occasional phone-app work from 2017 to current: small games, focused app ideas and lightweight experiments built to learn mobile flows, publishing, UI constraints and fast product iteration. Some were released publicly at the time and have since been retired, so this page presents the work as an archive rather than as active live products.",
     "category": "Mobile Apps",
     "year": "2017\u2014Current",
     "status": "Archived",
@@ -336,13 +336,13 @@
     "featuredOrder": 6,
     "stack": [
       "Mobile Apps",
-      "Simple Games",
+      "Game Experiments",
       "App Releases",
       "Mobile UI",
       "Product Prototyping"
     ],
     "highlights": [
-      "Released a couple of simple games and apps publicly before later taking them down.",
+      "Released a small set of games and apps publicly before later retiring them from distribution.",
       "Used small mobile builds to learn app flows, store packaging, interface constraints and release basics.",
       "Experimented with lightweight game ideas, simple utilities and phone-first interaction patterns.",
       "Carried lessons from early mobile experimentation into later product and app work."
@@ -358,7 +358,7 @@
       },
       {
         "label": "Status",
-        "value": "Taken down"
+        "value": "Archived"
       }
     ],
     "links": []
@@ -368,7 +368,7 @@
     "title": "Other AI Projects",
     "kicker": "Smaller applied-AI experiments and prototypes",
     "summary": "A long-running archive of AI experiments from 2018 onward, spanning algorithmic trading, sentiment analysis, NLP, reinforcement-learning game agents, drug-discovery ideas and many smaller model tests.",
-    "description": "Not every AI build needs to become a large case study. This entry groups smaller experiments from 2018 to current where the main value was testing a technique, exploring a workflow, learning a model family or proving whether an idea was useful enough to continue. The work has included algorithmic trading experiments, sentiment analysis, NLP workflows, reinforcement-learning agents learning games, drug-discovery-adjacent ideas and plenty of other smaller applied-AI tests.",
+    "description": "This entry collects smaller AI experiments from 2018 to current where the main value was testing a technique, exploring a workflow, learning a model family or proving whether an idea was useful enough to continue. The work has included algorithmic trading experiments, sentiment analysis, NLP workflows, reinforcement-learning agents learning game environments, drug-discovery-adjacent ideas and many other applied-AI tests.",
     "category": "AI / Experiments",
     "year": "2018\u2014Current",
     "status": "Archived",
@@ -392,7 +392,7 @@
     "highlights": [
       "Explored algorithmic trading ideas and market-signal experiments.",
       "Worked on sentiment analysis and NLP workflows for extracting useful signals from text.",
-      "Tested reinforcement-learning agents learning simple games and simulated environments.",
+      "Tested reinforcement-learning agents learning game environments and simulations.",
       "Built smaller drug-discovery and molecular-AI experiments alongside the larger dissertation pipeline.",
       "Used many smaller experiments to build intuition before committing to larger systems.",
       "Focused on practical usefulness, failure modes and iteration speed."
@@ -418,7 +418,7 @@
     "title": "Cyber Security Projects",
     "kicker": "Courses, government programmes and self-directed cyber security experiments",
     "summary": "A long-running cyber security thread covering courses, government programmes, hands-on labs and experiments across web security, Linux, networking, scripting and OSINT-style investigation.",
-    "description": "This entry groups cyber security work dating back to 2017, including courses, government cyber security programmes and self-directed experimentation across different parts of the field. Rather than a single shipped product, it reflects sustained exposure to the cyber security space: learning fundamentals, trying tools, working through practical exercises, exploring web security, Linux, networking, scripting and OSINT-style investigation, then carrying that security mindset into broader software engineering work.",
+    "description": "This archive covers cyber security work dating back to 2017, including courses, government cyber security programmes and self-directed experimentation across different parts of the field. Rather than a single shipped product, it reflects sustained exposure to the cyber security space: learning fundamentals, working with security tooling, completing practical exercises, exploring web security, Linux, networking, scripting and OSINT-style investigation, then carrying that security mindset into broader software engineering work.",
     "category": "Cyber Security",
     "year": "2017\u2014Current",
     "status": "Archived",

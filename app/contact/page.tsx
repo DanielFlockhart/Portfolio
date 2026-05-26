@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <Section eyebrow="Contact" title="Hiring, collaborating, or building something difficult?" className="min-h-[calc(100svh-4rem)] pt-20">
+    <Section eyebrow="Contact" title="Hiring, collaborating, or discussing technical work?" className="min-h-[calc(100svh-4rem)] pt-20">
       <div className="mx-auto flex w-full max-w-3xl flex-col items-center gap-8">
         <p className="max-w-2xl text-center text-lg font-medium leading-8 text-neutral-700">
           For roles, collaborations or technical conversations, email me directly at{" "}

@@ -57,7 +57,7 @@ export const projects: Project[] = [
     ],
     highlights: [
       "Designed an end-to-end research pipeline rather than an isolated model experiment, covering dataset curation, embedding, LLM augmentation, latent compression, generation, decoding, classifier ranking and novelty analysis.",
-      "Processed a hand-curated dataset of roughly 2,700 cognitive-related molecules alongside ZINC 250K SMILES, removing duplicate or chemically invalid molecules with RDKit checks and SMILES length filtering.",
+      "Processed a hand-curated dataset of approximately 2,700 cognitive-related molecules alongside ZINC 250K SMILES, removing duplicate or chemically invalid molecules with RDKit checks and SMILES length filtering.",
       "Used ChemBERTa to convert canonical SMILES into 768-dimensional molecular embeddings, then validated representational structure with PCA, t-SNE and K-means clusters.",
       "Used OpenAI models as a structured data augmentation layer for pharmacological effect and molecular class labels, then validated sample predictions against known molecules including methylphenidate, oxymorphone and tramadol.",
       "Trained an autoencoder over combined molecule, effect and class vectors, improving latent-space cluster separation compared with the original ChemBERTa vectors.",
@@ -78,7 +78,7 @@ export const projects: Project[] = [
       eyebrow: "Research architecture",
       title: "End-to-end generative molecule pipeline",
       body:
-        "The work tied together representation learning, LLM-assisted labelling, supervised learning, reinforcement learning, cheminformatics validation and a usable web interface so the whole discovery workflow could be tested as a pipeline rather than as disconnected model demos.",
+        "The work tied together representation learning, LLM-assisted labelling, supervised learning, reinforcement learning, cheminformatics validation and a usable web interface so the discovery workflow could be tested as an integrated pipeline rather than isolated proofs of concept.",
       points: [
         "SMILES to ChemBERTa to autoencoder latent space",
         "Supervised transformer to RL and genetic fine-tuning",
@@ -97,7 +97,7 @@ export const projects: Project[] = [
     summary:
       "An AI-assisted web and mobile travel-tech platform for sourcing, negotiating and managing complex workforce accommodation, then turning supplier responses into governed offers, approvals and booking records.",
     description:
-      "Co-founded and led technical development of Matched Stay, a middleware platform for non-standard corporate accommodation: long stays, multi-room projects, rotating cohorts, phased sites, crisis response and aviation disruption. The AI negotiation layer is the key technical wedge: LLM-assisted and agentic workflows target suppliers over email and voice, capture unstructured responses, and normalise rates, terms, availability, room mix, cancellation, inclusions and policy constraints into comparable offers. The product sits upstream of a client's normal travel stack, turning request intake into supplier outreach, negotiated options and structured approvals. The downstream strategy is to bridge confirmed bookings back into TMC/GDS records so duty of care, itinerary visibility, reporting and reconciliation remain intact.",
+      "Co-founded and led technical development of Matched Stay, a middleware platform for non-standard corporate accommodation: long stays, multi-room projects, rotating cohorts, phased sites, crisis response and aviation disruption. The AI negotiation layer is the core technical differentiator: LLM-assisted and agentic workflows target suppliers over email and voice, capture unstructured responses, and normalise rates, terms, availability, room mix, cancellation, inclusions and policy constraints into comparable offers. The product sits upstream of a client's normal travel stack, turning request intake into supplier outreach, negotiated options and structured approvals. The downstream strategy is to bridge confirmed bookings back into TMC/GDS records so duty of care, itinerary visibility, reporting and reconciliation remain intact.",
     category: "Startup / Full-stack Product",
     year: "2023—Present",
     status: "Live",
@@ -126,7 +126,7 @@ export const projects: Project[] = [
       "Used LLM-assisted extraction and normalisation to convert unstructured supplier replies into comparable offers covering rates, terms, availability, room mix, cancellation terms, inclusions and constraints.",
       "Built workflows around accommodation request intake, supplier/property sourcing, offer comparison, approvals and booking management.",
       "Shaped the platform as an upstream sourcing layer that can bridge confirmed bookings back into the corporate travel record for duty of care and reconciliation.",
-      "Worked on hard accommodation use cases including workforce projects, phased stays, rotating traveller cohorts, crisis response and aviation disruption.",
+      "Worked on complex accommodation use cases including workforce projects, phased stays, rotating traveller cohorts, crisis response and aviation disruption.",
       "Balanced engineering execution with pilot discovery, investor conversations, launch/testing events and business validation.",
     ],
     metrics: [
@@ -155,9 +155,9 @@ export const projects: Project[] = [
     title: "Digital Chemistry Research Internship",
     kicker: "Computer vision and ML for molecular skeletons",
     summary:
-      "University of Birmingham research work similar in direction to the later drug-discovery dissertation, but focused more tightly on computer vision, molecular skeleton representations and ML architectures for digital chemistry.",
+      "University of Birmingham research work that preceded the later drug-discovery dissertation, with a tighter focus on computer vision, molecular skeleton representations and ML architectures for digital chemistry.",
     description:
-      "Worked with University of Birmingham researchers on machine-learning approaches for digital chemistry. The work was conceptually related to the later AI drug-discovery dissertation because it explored how ML could represent and reason about molecular structures, but the internship leaned much more toward computer vision: molecular skeleton representations, image-like structural inputs, autoencoder-style experimentation and visual validation of learned representations. The project involved testing architectures, communicating results to technical domain experts and producing recommendations for future research.",
+      "Worked with University of Birmingham researchers on machine-learning approaches for digital chemistry. The work was conceptually related to the later AI drug-discovery dissertation because it explored how ML could represent and reason about molecular structures, while the internship leaned further toward computer vision: molecular skeleton representations, image-like structural inputs, autoencoder-style experimentation and visual validation of learned representations. The project involved testing architectures, communicating results to technical domain experts and producing recommendations for future research.",
     category: "Research Internship",
     year: "2023",
     status: "Research",
@@ -189,7 +189,7 @@ export const projects: Project[] = [
       eyebrow: "Research focus",
       title: "Computer vision for molecular structure understanding",
       body:
-        "This was an earlier digital-chemistry research project in the same broad family as the dissertation work, but instead of building a full generative drug-discovery pipeline it concentrated on how visual molecular skeleton representations could be processed with machine-learning architectures.",
+        "This was an earlier digital-chemistry research project in the same broad family as the dissertation work. Instead of building a full generative drug-discovery pipeline, it concentrated on how visual molecular skeleton representations could be processed with machine-learning architectures.",
       points: [
         "Molecular skeleton representations",
         "Computer-vision-led architecture experiments",
@@ -205,7 +205,7 @@ export const projects: Project[] = [
     summary:
       "An A-Level OCR Computer Science programming project where cars learned to navigate a track using custom C# neural networks and reinforcement learning inside Unity.",
     description:
-      "Built as an A-Level OCR Computer Science programming project, this Unity simulation trained cars to navigate around a track using home-programmed feed-forward neural networks and reinforcement learning rather than third-party ML libraries. The project combined car physics, sensor-style inputs, reward feedback, model loading and saving, UI buttons and visual training feedback. It was accompanied by a roughly 50,000-word written project explaining how the system worked and how it was developed, although the repository itself lacks full formal documentation because that file was too large to include.",
+      "Built as an A-Level OCR Computer Science programming project, this Unity simulation trained cars to navigate around a track using custom-built feed-forward neural networks and reinforcement learning rather than third-party ML libraries. The project combined car physics, sensor-style inputs, reward feedback, model loading and saving, training controls and visual feedback. It was accompanied by an approximately 50,000-word project report explaining the system design, development process and evaluation.",
     category: "AI / Reinforcement Learning",
     year: "A-Level OCR",
     status: "Archived",
@@ -226,7 +226,7 @@ export const projects: Project[] = [
       "Built the car physics, driving simulation and track-navigation environment in Unity.",
       "Implemented feed-forward neural networks and reinforcement learning logic manually in C# using default Unity libraries.",
       "Added model loading and saving so trained networks could be reused between sessions.",
-      "Built UI buttons and visual feedback for running training and inspecting whether cars were learning valid track behaviour.",
+      "Built training controls and visual feedback for inspecting whether cars were learning valid track behaviour.",
       "Produced a substantial written A-Level project report explaining the system and development process.",
     ],
     metrics: [
@@ -246,7 +246,7 @@ export const projects: Project[] = [
     summary:
       "A set of Ludum Dare game jam projects from 2020-2021, focused on building playable Unity prototypes with C# gameplay logic and Blender-made assets under tight deadlines.",
     description:
-      "These game jams were primarily Ludum Dare projects built in Unity between 2020 and 2021. The work involved writing gameplay systems in C#, creating simple 3D assets in Blender, scoping ideas down to something shippable, then building enough interaction, feedback and polish to make each prototype playable before the deadline.",
+      "These game jams were primarily Ludum Dare projects built in Unity between 2020 and 2021. The work involved writing gameplay systems in C#, creating lightweight 3D assets in Blender, scoping ideas down to something shippable, then building enough interaction, feedback and polish to make each prototype playable before the deadline.",
     category: "Creative Coding",
     year: "2020-2021",
     status: "Archived",
@@ -257,7 +257,7 @@ export const projects: Project[] = [
     highlights: [
       "Built Unity prototypes for Ludum Dare game jams under strict time limits.",
       "Used C# for gameplay logic, player interaction, game loops and feedback.",
-      "Created or adapted simple Blender assets to support the visual direction of the prototypes.",
+      "Created or adapted lightweight Blender assets to support the visual direction of the prototypes.",
       "Practised scoping ideas aggressively so the result was playable by the deadline.",
     ],
     metrics: [
@@ -270,20 +270,20 @@ export const projects: Project[] = [
   {
     slug: "assorted-phone-apps",
     title: "Assorted Phone Apps",
-    kicker: "Simple mobile games and apps released over time, now taken down",
+    kicker: "Archived mobile games and app experiments",
     summary:
-      "A long-running collection of simple mobile games and app experiments from 2017 onward, including a couple of public releases that are no longer live.",
+      "A long-running collection of mobile games and app experiments from 2017 onward, including public releases that have since been retired from distribution.",
     description:
-      "This entry groups early and occasional phone-app work from 2017 to current: small games, simple app ideas and lightweight experiments built to learn mobile flows, publishing, UI constraints and fast product iteration. A couple of these were released publicly at the time, but they have since been taken down, so this is kept as a broad archive rather than a set of active live products.",
+      "This entry groups early and occasional phone-app work from 2017 to current: small games, focused app ideas and lightweight experiments built to learn mobile flows, publishing, UI constraints and fast product iteration. Some were released publicly at the time and have since been retired, so this page presents the work as an archive rather than as active live products.",
     category: "Mobile Apps",
     year: "2017—Current",
     status: "Archived",
     visibility: "published",
     featured: false,
     featuredOrder: 6,
-    stack: ["Mobile Apps", "Simple Games", "App Releases", "Mobile UI", "Product Prototyping"],
+    stack: ["Mobile Apps", "Game Experiments", "App Releases", "Mobile UI", "Product Prototyping"],
     highlights: [
-      "Released a couple of simple games and apps publicly before later taking them down.",
+      "Released a small set of games and apps publicly before later retiring them from distribution.",
       "Used small mobile builds to learn app flows, store packaging, interface constraints and release basics.",
       "Experimented with lightweight game ideas, simple utilities and phone-first interaction patterns.",
       "Carried lessons from early mobile experimentation into later product and app work.",
@@ -291,7 +291,7 @@ export const projects: Project[] = [
     metrics: [
       { label: "Period", value: "2017—Current" },
       { label: "Output", value: "Games + apps" },
-      { label: "Status", value: "Taken down" },
+      { label: "Status", value: "Archived" },
     ],
     links: [],
   },
@@ -302,7 +302,7 @@ export const projects: Project[] = [
     summary:
       "A long-running archive of AI experiments from 2018 onward, spanning algorithmic trading, sentiment analysis, NLP, reinforcement-learning game agents, drug-discovery ideas and many smaller model tests.",
     description:
-      "Not every AI build needs to become a large case study. This entry groups smaller experiments from 2018 to current where the main value was testing a technique, exploring a workflow, learning a model family or proving whether an idea was useful enough to continue. The work has included algorithmic trading experiments, sentiment analysis, NLP workflows, reinforcement-learning agents learning games, drug-discovery-adjacent ideas and plenty of other smaller applied-AI tests.",
+      "This entry collects smaller AI experiments from 2018 to current where the main value was testing a technique, exploring a workflow, learning a model family or proving whether an idea was useful enough to continue. The work has included algorithmic trading experiments, sentiment analysis, NLP workflows, reinforcement-learning agents learning game environments, drug-discovery-adjacent ideas and many other applied-AI tests.",
     category: "AI / Experiments",
     year: "2018—Current",
     status: "Archived",
@@ -326,7 +326,7 @@ export const projects: Project[] = [
     highlights: [
       "Explored algorithmic trading ideas and market-signal experiments.",
       "Worked on sentiment analysis and NLP workflows for extracting useful signals from text.",
-      "Tested reinforcement-learning agents learning simple games and simulated environments.",
+      "Tested reinforcement-learning agents learning game environments and simulations.",
       "Built smaller drug-discovery and molecular-AI experiments alongside the larger dissertation pipeline.",
       "Used many smaller experiments to build intuition before committing to larger systems.",
       "Focused on practical usefulness, failure modes and iteration speed.",
@@ -345,7 +345,7 @@ export const projects: Project[] = [
     summary:
       "A long-running cyber security thread covering courses, government programmes, hands-on labs and experiments across web security, Linux, networking, scripting and OSINT-style investigation.",
     description:
-      "This entry groups cyber security work dating back to 2017, including courses, government cyber security programmes and self-directed experimentation across different parts of the field. Rather than a single shipped product, it reflects sustained exposure to the cyber security space: learning fundamentals, trying tools, working through practical exercises, exploring web security, Linux, networking, scripting and OSINT-style investigation, then carrying that security mindset into broader software engineering work.",
+      "This archive covers cyber security work dating back to 2017, including courses, government cyber security programmes and self-directed experimentation across different parts of the field. Rather than a single shipped product, it reflects sustained exposure to the cyber security space: learning fundamentals, working with security tooling, completing practical exercises, exploring web security, Linux, networking, scripting and OSINT-style investigation, then carrying that security mindset into broader software engineering work.",
     category: "Cyber Security",
     year: "2017—Current",
     status: "Archived",
@@ -375,7 +375,7 @@ export const projects: Project[] = [
     category: "Web Platform",
     year: "2026",
     status: "Archived",
-    visibility: "published",
+    visibility: "draft",
     featured: false,
     featuredOrder: 9,
     stack: ["Next.js", "TypeScript", "Tailwind", "Firebase App Hosting", "Firestore"],
@@ -415,7 +415,7 @@ export const achievements: Achievement[] = [
     ],
     context: [
       "The running arc has moved from shorter speed benchmarks into increasingly long events, using ultra-distance work to test pacing, fatigue management and the ability to keep moving when the feedback is immediate.",
-      "It also gives the portfolio a clear non-technical signal: a habit of committing to long, uncomfortable objectives and turning them into measurable progress.",
+      "It also shows a habit of committing to long, uncomfortable objectives and turning them into measurable progress.",
     ],
     takeaways: [
       "Consistency compounds more reliably than motivation.",
@@ -443,7 +443,7 @@ export const achievements: Achievement[] = [
       { label: "Base", value: "MMA / BJJ" },
     ],
     context: [
-      "MMA sits in the achievements section because it is an unusually clear test of preparation. Skill, conditioning and composure all get exposed at once, and the feedback arrives quickly.",
+      "MMA is an unusually clear test of preparation. Skill, conditioning and composure all get exposed at once, and the feedback arrives quickly.",
       "The experience matters beyond sport because it forced a more direct relationship with pressure, preparation and emotional control.",
     ],
     takeaways: [
@@ -458,21 +458,22 @@ export const achievements: Achievement[] = [
     category: "Performance",
     period: "2015 — 2022",
     summary:
-      "Seven-year Theatre Arts scholarship and stage background, including school productions and an Edinburgh Fringe performance.",
+      "Seven-year Theatre Arts scholarship and stage background, including school productions, multiple Edinburgh Fringe performances and dozens of shows.",
     details: [
       "Earned a Theatre Arts scholarship after a primary-school performance and stayed involved through 2022.",
-      "Performed across school plays, Theatre Arts productions and the Edinburgh Fringe in 2018.",
-      "Built comfort presenting in front of large audiences, with the document noting performances in front of thousands of people.",
+      "Performed across school plays, Theatre Arts productions and multiple Edinburgh Fringe performances in 2018.",
+      "Appeared in dozens and dozens of shows, performing to thousands of people in total.",
+      "Built comfort presenting in front of large audiences through repeated live stage work.",
       "Developed public presence, timing, memory, teamwork and audience-facing confidence before moving into technical and business settings.",
     ],
     metrics: [
       { label: "Scholarship", value: "7 years" },
       { label: "Stage period", value: "2015-2022" },
-      { label: "Highlight", value: "Edinburgh Fringe" },
+      { label: "Highlight", value: "Edinburgh Fringe performances" },
       { label: "Skill", value: "Public presence" },
     ],
     context: [
-      "Theatre is the foundation for a lot of the communication style elsewhere in the portfolio: pitching, presenting, explaining complex work and staying composed in public.",
+      "Theatre built the communication base behind later pitching, presenting, explaining complex work and staying composed in public.",
       "It also adds a different kind of collaboration signal from software teams: rehearsals, cues and live delivery require reliability when other people are depending on the performance.",
     ],
     takeaways: [
@@ -501,8 +502,8 @@ export const achievements: Achievement[] = [
       { label: "Category", value: "Accelerator" },
     ],
     context: [
-      "This belongs on the achievements page because it is a concrete entrepreneurial milestone: a judged programme putting money behind the venture, not just an internal belief that the product mattered.",
-      "It also bridges the portfolio's technical and commercial sides by showing that the product work could be packaged, presented and backed by an external institution.",
+      "This was a concrete entrepreneurial milestone: a judged programme putting money behind the venture rather than internal belief alone.",
+      "It also bridges technical and commercial execution by showing that the product work could be packaged, presented and backed by an external institution.",
     ],
     takeaways: [
       "Commercial progress needs evidence, not just activity.",
@@ -530,8 +531,8 @@ export const achievements: Achievement[] = [
       { label: "Institution", value: "Birmingham" },
     ],
     context: [
-      "The degree page gives the academic achievement its own place without duplicating the dissertation as professional experience.",
-      "It is useful context for the AI-heavy project work elsewhere on the site, especially the combination of research pipelines, software engineering and applied machine learning.",
+      "The degree gives concise academic context without duplicating the dissertation as professional experience.",
+      "It supports the AI-heavy project work elsewhere on the site, especially the combination of research pipelines, software engineering and applied machine learning.",
     ],
     takeaways: [
       "Academic depth and practical building can reinforce each other.",
