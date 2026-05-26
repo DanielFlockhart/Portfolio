@@ -51,3 +51,4 @@ firebase deploy --only firestore
 6. Make `danielflockhart.com` the canonical domain and redirect the others to it.
 
 See `docs/DEPLOYMENT.md` and `docs/FIREBASE_SCHEMA.md`.
+asdasdda
