@@ -86,8 +86,11 @@ export const projects: Project[] = [
       ],
     },
     links: [
-      { label: "Codebase", href: "https://github.com/DanielFlockhart/dxf297-drug-discovery-pipeline", external: true },
-      { label: "Front-end demo", href: "https://www.eruditeindustries.com/", external: true },
+      {
+        label: "Front-end demo",
+        href: "https://erudite-web-front-end--erudite-8d040.europe-west4.hosted.app",
+        external: true,
+      },
     ],
   },
   {
@@ -148,7 +151,9 @@ export const projects: Project[] = [
         "Agentic workflow from sourcing to approval-ready offers",
       ],
     },
-    links: [],
+    links: [
+      { label: "Website", href: "https://matchedstay.co.uk", external: true },
+    ],
   },
   {
     slug: "digital-chemistry-research",
@@ -462,7 +467,7 @@ export const achievements: Achievement[] = [
     details: [
       "Earned a Theatre Arts scholarship after a primary-school performance and stayed involved through 2022.",
       "Performed across school plays, Theatre Arts productions and multiple Edinburgh Fringe performances in 2018.",
-      "Appeared in dozens and dozens of shows, performing to thousands of people in total.",
+      "Appeared in dozens shows, performing to thousands of people in total.",
       "Built comfort presenting in front of large audiences through repeated live stage work.",
       "Developed public presence, timing, memory, teamwork and audience-facing confidence before moving into technical and business settings.",
     ],
@@ -576,6 +581,7 @@ export const skillGroups = [
       "Applied AI systems across research pipelines, LLM workflows, reinforcement learning, computer vision and model evaluation.",
     items: [
       "Python",
+      "OpenAI API",
       "PyTorch",
       "TensorFlow",
       "Scikit-learn",
@@ -591,13 +597,32 @@ export const skillGroups = [
       "Feature Engineering",
       "Data Augmentation",
       "Computer Vision",
+      "LLM Data Labelling",
+      "Agentic Workflows",
     ],
   },
   {
     title: "Software Engineering",
     summary:
       "Full-stack product development from frontend interfaces through backend APIs, data models, deployment and maintenance.",
-    items: ["TypeScript", "React", "Next.js", "React Native", "Node.js", "APIs", "Database Design", "Testing", "System Architecture"],
+    items: [
+      "TypeScript",
+      "JavaScript",
+      "Java",
+      "C#",
+      "React",
+      "Next.js",
+      "React Native",
+      "Node.js",
+      "Flask",
+      "Tailwind CSS",
+      "APIs",
+      "Web App Development",
+      "Mobile App Development",
+      "Database Design",
+      "Testing",
+      "System Architecture",
+    ],
   },
   {
     title: "Cloud, Data & Infrastructure",
@@ -615,6 +640,19 @@ export const skillGroups = [
     title: "Product, Research & Communication",
     summary:
       "Turning ambiguous requirements into usable systems through research, stakeholder work, prototyping and clear product judgement.",
-    items: ["Product Design", "Technical Writing", "Research Communication", "Startup Operations", "User Flows", "Rapid Prototyping"],
+    items: [
+      "Product Design",
+      "UI/UX Design",
+      "Interface Design",
+      "Design Systems",
+      "Game Design",
+      "Unity",
+      "Blender",
+      "Technical Writing",
+      "Research Communication",
+      "Startup Operations",
+      "User Flows",
+      "Rapid Prototyping",
+    ],
   },
 ];

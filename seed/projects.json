@@ -84,13 +84,8 @@
     },
     "links": [
       {
-        "label": "Codebase",
-        "href": "https://github.com/DanielFlockhart/dxf297-drug-discovery-pipeline",
-        "external": true
-      },
-      {
         "label": "Front-end demo",
-        "href": "https://www.eruditeindustries.com/",
+        "href": "https://erudite-web-front-end--erudite-8d040.europe-west4.hosted.app",
         "external": true
       }
     ]
@@ -168,7 +163,13 @@
         "Agentic workflow from sourcing to approval-ready offers"
       ]
     },
-    "links": []
+    "links": [
+      {
+        "label": "Website",
+        "href": "https://matchedstay.co.uk",
+        "external": true
+      }
+    ]
   },
   {
     "slug": "digital-chemistry-research",
