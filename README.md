@@ -6,7 +6,7 @@ A reusable portfolio starter built with **Next.js**, **Tailwind CSS** and **Fire
 
 - Next.js App Router + TypeScript
 - Tailwind CSS v4 setup
-- Aesthetic dark technical design
+- Brutalist light portfolio design
 - Project case-study pages
 - Contact form with server-side Firestore storage
 - Firebase Admin SDK integration with local-data fallback
@@ -51,4 +51,3 @@ firebase deploy --only firestore
 6. Make `danielflockhart.com` the canonical domain and redirect the others to it.
 
 See `docs/DEPLOYMENT.md` and `docs/FIREBASE_SCHEMA.md`.
-asdasdda

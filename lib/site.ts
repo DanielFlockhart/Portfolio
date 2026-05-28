@@ -405,15 +405,15 @@ export const achievements: Achievement[] = [
     category: "Endurance",
     period: "2024 — Present",
     summary:
-      "Built from a 50K in 2024 to a 50-mile finish and a 100km backyard ultra effort, with an 18:30 5K marker showing speed alongside distance.",
+      "Built from a 50 km in 2024 to a 50-mile finish and a 100 km backyard ultra effort, with an 18:30 5K marker showing speed alongside distance.",
     details: [
-      "Recorded PBs including 50km in 4:51:47, 50 miles in 9:47:00 and 100km in 14:44:00.",
-      "Built a daily-running streak of 250+ Days (Currently) and used endurance work as a forcing function for consistency, recovery and decision-making under fatigue.",
+      "Recorded PBs including 50 km in 4:51:47, 50 miles in 9:47:00 and 100 km in 14:44:00.",
+      "Built a daily-running streak of 250+ days and used endurance work as a forcing function for consistency, recovery and decision-making under fatigue.",
       "Set the next target around 100-mile capability and stronger backyard-ultra performance.",
     ],
     metrics: [
-      { label: "Distance PB", value: "100km" },
-      { label: "50km PB", value: "4:51:47" },
+      { label: "Distance PB", value: "100 km" },
+      { label: "50 km PB", value: "4:51:47" },
       { label: "50-mile PB", value: "9:47:00" },
       { label: "5K PB", value: "18:30" },
     ],
@@ -465,7 +465,7 @@ export const achievements: Achievement[] = [
       "Seven-year Theatre Arts scholarship and stage background, including school productions, multiple Edinburgh Fringe performances and dozens of shows.",
     details: [
       "Earned a Theatre Arts scholarship after a performance in 2014 and stayed involved through 2022.",
-      "Performed across school plays, Theatre Arts productions.",
+      "Performed across school plays and Theatre Arts productions.",
       "Performed in multiple Edinburgh Fringe performances in 2018.",
       "Built comfort presenting in front of large audiences through repeated live stage work.",
       "Developed public presence, timing, memory, teamwork and audience-facing confidence before moving into technical and business settings.",

@@ -23,10 +23,14 @@
 *.pem
 
 # debug
+firebase-debug.log*
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+
+# build caches
+*.tsbuildinfo
 
 # env
 .env*

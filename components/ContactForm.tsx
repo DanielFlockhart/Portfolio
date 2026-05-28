@@ -6,6 +6,7 @@ const initialForm = {
   name: "",
   email: "",
   message: "",
+  website: "",
 };
 
 export function ContactForm() {
@@ -96,6 +97,18 @@ export function ContactForm() {
           rows={6}
           className="field-input mt-2 w-full resize-none border-2 border-black px-4 py-3 font-medium text-black outline-none transition placeholder:text-neutral-500 focus:shadow-[5px_5px_0_#050505]"
           placeholder="Tell me what you are hiring for, building, or trying to solve."
+        />
+      </div>
+
+      <div className="hidden" aria-hidden="true">
+        <label htmlFor="website">Website</label>
+        <input
+          id="website"
+          name="website"
+          value={form.website}
+          onChange={(event) => setForm((current) => ({ ...current, website: event.target.value }))}
+          autoComplete="off"
+          tabIndex={-1}
         />
       </div>
 
