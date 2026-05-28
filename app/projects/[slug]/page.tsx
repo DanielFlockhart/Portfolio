@@ -111,9 +111,18 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
 
             <div className="mt-10 grid gap-3 sm:grid-cols-3">
               {project.metrics.map((metric) => (
-                <div key={metric.label} className="border-2 border-black bg-white p-4">
-                  <p className="text-2xl font-black uppercase text-black">{metric.value}</p>
-                  <p className="mt-2 text-xs font-bold uppercase text-neutral-600">{metric.label}</p>
+                <div key={metric.label} className="flex min-h-28 flex-col border-2 border-black bg-white p-4">
+                  <p
+                    className={cn(
+                      "font-black uppercase leading-tight text-black",
+                      project.slug === "matched-stay" && metric.label === "Role"
+                        ? "whitespace-nowrap text-lg sm:text-xl"
+                        : "text-2xl",
+                    )}
+                  >
+                    {metric.value}
+                  </p>
+                  <p className="mt-auto pt-3 text-xs font-bold uppercase text-neutral-600">{metric.label}</p>
                 </div>
               ))}
             </div>

@@ -106,7 +106,7 @@
       "Next.js",
       "React Native",
       "Node.js",
-      "LLMs",
+      "LLM",
       "Agentic Workflows",
       "AI Negotiation",
       "Firebase",
@@ -327,10 +327,10 @@
     "slug": "assorted-phone-apps",
     "title": "Assorted Phone Apps",
     "kicker": "Archived mobile games and app experiments",
-    "summary": "A long-running collection of mobile games and app experiments from 2017 onward, including public releases that have since been retired from distribution.",
-    "description": "This entry groups early and occasional phone-app work from 2017 to current: small games, focused app ideas and lightweight experiments built to learn mobile flows, publishing, UI constraints and fast product iteration. Some were released publicly at the time and have since been retired, so this page presents the work as an archive rather than as active live products.",
+    "summary": "A collection of mobile games and app experiments from 2017 to 2025, including public releases that have since been retired from distribution.",
+    "description": "This entry groups early and occasional phone-app work from 2017 to 2025: small games, focused app ideas and lightweight experiments built to learn mobile flows, publishing, UI constraints and fast product iteration. Some were released publicly at the time and have since been retired, so this page presents the work as an archive rather than as active live products.",
     "category": "Mobile Apps",
-    "year": "2017\u2014Current",
+    "year": "2017 - 2025",
     "status": "Archived",
     "visibility": "published",
     "featured": false,
@@ -351,7 +351,7 @@
     "metrics": [
       {
         "label": "Period",
-        "value": "2017\u2014Current"
+        "value": "2017 - 2025"
       },
       {
         "label": "Output",
@@ -385,7 +385,7 @@
       "Reinforcement Learning",
       "Game Agents",
       "Drug Discovery",
-      "LLMs",
+      "LLM",
       "Automation",
       "Data Analysis",
       "APIs"
@@ -418,10 +418,10 @@
     "slug": "cyber-security-projects",
     "title": "Cyber Security Projects",
     "kicker": "Courses, government programmes and self-directed cyber security experiments",
-    "summary": "A long-running cyber security thread covering courses, government programmes, hands-on labs and experiments across web security, Linux, networking, scripting and OSINT-style investigation.",
-    "description": "This archive covers cyber security work dating back to 2017, including courses, government cyber security programmes and self-directed experimentation across different parts of the field. Rather than a single shipped product, it reflects sustained exposure to the cyber security space: learning fundamentals, working with security tooling, completing practical exercises, exploring web security, Linux, networking, scripting and OSINT-style investigation, then carrying that security mindset into broader software engineering work.",
+    "summary": "A 2017 to 2023 cyber security thread covering courses, government programmes, hands-on labs and experiments across web security, Linux, networking, scripting and OSINT-style investigation.",
+    "description": "This archive covers cyber security work from 2017 to 2023, including courses, government cyber security programmes and self-directed experimentation across different parts of the field. Rather than a single shipped product, it reflects sustained exposure to the cyber security space: learning fundamentals, working with security tooling, completing practical exercises, exploring web security, Linux, networking, scripting and OSINT-style investigation, then carrying that security mindset into broader software engineering work.",
     "category": "Cyber Security",
-    "year": "2017\u2014Current",
+    "year": "2017 - 2023",
     "status": "Archived",
     "visibility": "published",
     "featured": false,
@@ -443,7 +443,7 @@
     "metrics": [
       {
         "label": "Period",
-        "value": "2017\u2014Current"
+        "value": "2017 - 2023"
       },
       {
         "label": "Format",

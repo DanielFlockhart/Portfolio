@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function AchievementsPage() {
   return (
-    <Section eyebrow="Achievements" title="Personal milestones across sport, performance, study and business." className="min-h-[calc(100svh-4rem)] pt-20">
+    <Section eyebrow="Achievements" title="Personal Achievements" className="min-h-[calc(100svh-4rem)] pt-20">
       <p className="mb-10 max-w-3xl border-l-8 border-black bg-white py-2 pl-5 text-lg font-medium leading-8 text-neutral-700">
         A concise record of demanding milestones that shaped how I handle pressure, discipline, performance and long-term effort.
       </p>
@@ -21,7 +21,7 @@ export default function AchievementsPage() {
           <Link
             key={achievement.slug}
             href={`/achievements/${achievement.slug}`}
-            className="group block border-2 border-black bg-white p-6 shadow-[8px_8px_0_#050505] transition duration-200 hover:-translate-y-1 hover:shadow-[12px_12px_0_#050505]"
+            className="group flex min-h-full flex-col border-2 border-black bg-white p-5 shadow-[8px_8px_0_#050505] transition duration-200 hover:-translate-y-1 hover:shadow-[12px_12px_0_#050505]"
           >
             <div className="flex flex-col gap-3 border-b-2 border-black pb-5">
               <p className="text-xs font-black uppercase text-neutral-600">{achievement.category}</p>
@@ -33,16 +33,8 @@ export default function AchievementsPage() {
 
             <p className="mt-5 text-sm font-medium leading-6 text-neutral-700">{achievement.summary}</p>
 
-            <ul className="mt-6 space-y-3">
-              {achievement.details.slice(0, 3).map((detail) => (
-                <li key={detail} className="flex gap-3 text-sm font-medium leading-6 text-neutral-700">
-                  <span className="mt-2 size-2 shrink-0 bg-black" />
-                  {detail}
-                </li>
-              ))}
-            </ul>
-            <span className="mt-6 inline-block text-sm font-black uppercase text-black transition group-hover:translate-x-1">
-              View achievement -&gt;
+            <span className="mt-auto inline-block pt-6 text-sm font-black uppercase text-black transition group-hover:translate-x-1">
+              View full achievement -&gt;
             </span>
           </Link>
         ))}

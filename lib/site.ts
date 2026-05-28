@@ -111,7 +111,7 @@ export const projects: Project[] = [
       "Next.js",
       "React Native",
       "Node.js",
-      "LLMs",
+      "LLM",
       "Agentic Workflows",
       "AI Negotiation",
       "Firebase",
@@ -277,11 +277,11 @@ export const projects: Project[] = [
     title: "Assorted Phone Apps",
     kicker: "Archived mobile games and app experiments",
     summary:
-      "A long-running collection of mobile games and app experiments from 2017 onward, including public releases that have since been retired from distribution.",
+      "A collection of mobile games and app experiments from 2017 to 2025, including public releases that have since been retired from distribution.",
     description:
-      "This entry groups early and occasional phone-app work from 2017 to current: small games, focused app ideas and lightweight experiments built to learn mobile flows, publishing, UI constraints and fast product iteration. Some were released publicly at the time and have since been retired, so this page presents the work as an archive rather than as active live products.",
+      "This entry groups early and occasional phone-app work from 2017 to 2025: small games, focused app ideas and lightweight experiments built to learn mobile flows, publishing, UI constraints and fast product iteration. Some were released publicly at the time and have since been retired, so this page presents the work as an archive rather than as active live products.",
     category: "Mobile Apps",
-    year: "2017—Current",
+    year: "2017 - 2025",
     status: "Archived",
     visibility: "published",
     featured: false,
@@ -294,7 +294,7 @@ export const projects: Project[] = [
       "Carried lessons from early mobile experimentation into later product and app work.",
     ],
     metrics: [
-      { label: "Period", value: "2017—Current" },
+      { label: "Period", value: "2017 - 2025" },
       { label: "Output", value: "Games + apps" },
       { label: "Status", value: "Archived" },
     ],
@@ -323,7 +323,7 @@ export const projects: Project[] = [
       "Reinforcement Learning",
       "Game Agents",
       "Drug Discovery",
-      "LLMs",
+      "LLM",
       "Automation",
       "Data Analysis",
       "APIs",
@@ -348,11 +348,11 @@ export const projects: Project[] = [
     title: "Cyber Security Projects",
     kicker: "Courses, government programmes and self-directed cyber security experiments",
     summary:
-      "A long-running cyber security thread covering courses, government programmes, hands-on labs and experiments across web security, Linux, networking, scripting and OSINT-style investigation.",
+      "A 2017 to 2023 cyber security thread covering courses, government programmes, hands-on labs and experiments across web security, Linux, networking, scripting and OSINT-style investigation.",
     description:
-      "This archive covers cyber security work dating back to 2017, including courses, government cyber security programmes and self-directed experimentation across different parts of the field. Rather than a single shipped product, it reflects sustained exposure to the cyber security space: learning fundamentals, working with security tooling, completing practical exercises, exploring web security, Linux, networking, scripting and OSINT-style investigation, then carrying that security mindset into broader software engineering work.",
+      "This archive covers cyber security work from 2017 to 2023, including courses, government cyber security programmes and self-directed experimentation across different parts of the field. Rather than a single shipped product, it reflects sustained exposure to the cyber security space: learning fundamentals, working with security tooling, completing practical exercises, exploring web security, Linux, networking, scripting and OSINT-style investigation, then carrying that security mindset into broader software engineering work.",
     category: "Cyber Security",
-    year: "2017—Current",
+    year: "2017 - 2023",
     status: "Archived",
     visibility: "published",
     featured: false,
@@ -363,7 +363,7 @@ export const projects: Project[] = [
       "Used security work to understand how systems fail, how tools behave and how defensive thinking improves broader engineering decisions.",
     ],
     metrics: [
-      { label: "Period", value: "2017—Current" },
+      { label: "Period", value: "2017 - 2023" },
       { label: "Format", value: "Courses + programmes" },
       { label: "Scope", value: "Labs + experiments" },
     ],
@@ -401,15 +401,14 @@ export const projects: Project[] = [
 export const achievements: Achievement[] = [
   {
     slug: "ultra-running",
-    title: "Ultra-Endurance Running",
+    title: "Ultra Running",
     category: "Endurance",
     period: "2024 — Present",
     summary:
-      "Built from a first 50K in 2024 to a 50-mile finish and a 100km backyard ultra effort, with an 18:30 5K marker showing speed alongside distance.",
+      "Built from a 50K in 2024 to a 50-mile finish and a 100km backyard ultra effort, with an 18:30 5K marker showing speed alongside distance.",
     details: [
-      "Completed two 50K efforts, a 50-mile run and a 100km backyard ultra, turning distance running into a repeatable discipline rather than a one-off challenge.",
       "Recorded PBs including 50km in 4:51:47, 50 miles in 9:47:00 and 100km in 14:44:00.",
-      "Built a daily-running base and used endurance work as a forcing function for consistency, recovery and decision-making under fatigue.",
+      "Built a daily-running streak of 250+ Days (Currently) and used endurance work as a forcing function for consistency, recovery and decision-making under fatigue.",
       "Set the next target around 100-mile capability and stronger backyard-ultra performance.",
     ],
     metrics: [
@@ -434,17 +433,17 @@ export const achievements: Achievement[] = [
     category: "Combat Sport",
     period: "2022 — 2023",
     summary:
-      "Two MMA fights from a serious university training block: one full-distance contest and one first-round ground-and-pound win.",
+      "Two university MMA fights that sharpened focus, composure and learning under immediate feedback.",
     details: [
-      "Joined university MMA and trained seriously several times a week before taking the first fight in Southampton.",
-      "First fight went the full distance and came down to a close decision, creating useful pressure experience even without the official result.",
-      "Second fight ended in the first round after gaining mount and winning by ground-and-pound.",
+      "First fight taught focus, pacing and composure in a close result.",
+      "Mistakes became a cleaner second performance, finished patiently from mount.",
+      "Pressure reinforced emotional control over aggression.",
       "Built confidence in grappling-led pressure, conditioning and emotional control under a public scoreboard.",
     ],
     metrics: [
       { label: "Fights", value: "2" },
       { label: "Record", value: "1-1" },
-      { label: "Win method", value: "Ground-and-pound" },
+      { label: "Win method", value: "TKO" },
       { label: "Base", value: "MMA / BJJ" },
     ],
     context: [
@@ -465,9 +464,9 @@ export const achievements: Achievement[] = [
     summary:
       "Seven-year Theatre Arts scholarship and stage background, including school productions, multiple Edinburgh Fringe performances and dozens of shows.",
     details: [
-      "Earned a Theatre Arts scholarship after a primary-school performance and stayed involved through 2022.",
-      "Performed across school plays, Theatre Arts productions and multiple Edinburgh Fringe performances in 2018.",
-      "Appeared in dozens shows, performing to thousands of people in total.",
+      "Earned a Theatre Arts scholarship after a performance in 2014 and stayed involved through 2022.",
+      "Performed across school plays, Theatre Arts productions.",
+      "Performed in multiple Edinburgh Fringe performances in 2018.",
       "Built comfort presenting in front of large audiences through repeated live stage work.",
       "Developed public presence, timing, memory, teamwork and audience-facing confidence before moving into technical and business settings.",
     ],
@@ -525,14 +524,13 @@ export const achievements: Achievement[] = [
       "Graduated from the University of Birmingham with a First-Class BSc in Artificial Intelligence with Computer Science.",
     details: [
       "Completed a BSc in Artificial Intelligence with Computer Science with a First-Class result.",
-      "Finished with a 71.3% overall mark while also building Matched Stay and maintaining demanding sport commitments.",
+      "Finished with a 1st Class overall mark while also building Matched Stay and maintaining demanding sport commitments.",
       "Built the dissertation drug-discovery pipeline as a project outcome, keeping that work represented as a project rather than an experience role.",
       "Strengthened the AI, software engineering and research base behind the portfolio's technical projects.",
     ],
     metrics: [
       { label: "Degree", value: "BSc AI & CS" },
       { label: "Result", value: "First Class" },
-      { label: "Mark", value: "71.3%" },
       { label: "Institution", value: "Birmingham" },
     ],
     context: [
@@ -554,7 +552,7 @@ export const experience: Experience[] = [
     period: "Jul 2023 — Present",
     summary:
       "Leading technical development, product design and deployment of a travel-tech platform while supporting client acquisition, investor conversations and release planning.",
-    tags: ["Startup", "Full-stack", "Firebase", "Product"],
+    tags: ["Startup", "Full-stack", "Product"],
   },
   {
     role: "Digital Chemistry Research Intern",
@@ -587,7 +585,7 @@ export const skillGroups = [
       "Scikit-learn",
       "ChemBERTa",
       "RDKit",
-      "LLMs",
+      "LLM",
       "Supervised Learning",
       "Unsupervised Learning",
       "Reinforcement Learning",

@@ -3,6 +3,7 @@ import type { Metadata, Viewport } from "next";
 import { FirebaseAnalytics } from "@/components/FirebaseAnalytics";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { NoWordBreaks } from "@/components/NoWordBreaks";
 import { profile, SITE_URL } from "@/lib/site";
 import "./globals.css";
 
@@ -56,6 +57,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             <main>{children}</main>
             <Footer />
           </div>
+          <NoWordBreaks />
           <FirebaseAnalytics />
         </div>
       </body>

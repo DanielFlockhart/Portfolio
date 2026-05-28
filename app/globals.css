@@ -39,12 +39,22 @@ form {
 h1,
 h2,
 h3,
+h4,
+h5,
+h6,
 p,
 a,
+button,
+label,
 span,
+strong,
+em,
 li,
+dt,
 dd {
-  overflow-wrap: break-word;
+  overflow-wrap: normal;
+  word-break: keep-all;
+  hyphens: none;
 }
 
 ::selection {

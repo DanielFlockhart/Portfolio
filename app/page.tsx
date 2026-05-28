@@ -37,17 +37,17 @@ export default async function Home() {
           <div className="min-w-0 max-w-5xl">
             <div className="reveal-up inline-flex border-2 border-black bg-white text-xs font-black uppercase text-black">
               <span className="border-r-2 border-black bg-black px-3 py-2 text-white">Building</span>
-              <span className="px-3 py-2">AI systems and product engineering</span>
+              <span className="px-3 py-2">AI systems & product engineering</span>
             </div>
             <p className="reveal-up reveal-delay-1 mt-8 text-sm font-black uppercase text-neutral-700">
               Portfolio / Applied AI / Product Engineering
             </p>
-            <h1 className="reveal-up reveal-delay-1 mt-4 max-w-5xl break-words text-5xl font-black uppercase leading-[0.92] text-black sm:text-7xl lg:text-[7.25rem] xl:text-[7.75rem]">
-              Daniel
-              <span className="text-outline block">Flockhart</span>
+            <h1 className="reveal-up reveal-delay-1 mt-4 max-w-full text-[2.25rem] font-black uppercase leading-[0.92] text-black sm:text-7xl lg:text-[7.25rem] xl:text-[7.75rem]">
+              <span className="block whitespace-nowrap">Daniel</span>
+              <span className="text-outline block whitespace-nowrap">Flockhart</span>
             </h1>
-            <p className="reveal-up reveal-delay-2 mt-6 max-w-2xl break-words text-lg font-medium leading-8 text-neutral-700">
-              {profile.description} The through-line is turning ambiguous technical problems into working systems people can actually use.
+            <p className="reveal-up reveal-delay-2 mt-6 max-w-2xl text-lg font-medium leading-8 text-neutral-700">
+              {profile.description} At its core, this is about turning ambiguous technical problems into working systems people can actually use.
             </p>
             <div className="reveal-up reveal-delay-2 mt-8 flex flex-wrap gap-4">
               <ButtonLink href="/projects">View projects</ButtonLink>
@@ -62,7 +62,7 @@ export default async function Home() {
             <div className="reveal-up reveal-delay-3 mt-10 grid max-w-full overflow-hidden border-2 border-black bg-white sm:grid-cols-3">
               <Stat value="1st" label="BSc Artificial Intelligence & Computer Science" />
               <Stat value="CTO" label="Co-founded and built a launched travel-tech platform" />
-              <Stat value="AI" label="Machine learning, product engineering and security-minded systems" />
+              <Stat value="AI" label="Machine learning, product engineering & security-minded systems" />
             </div>
           </div>
 
@@ -70,7 +70,7 @@ export default async function Home() {
             <div className="absolute inset-0 translate-x-4 translate-y-4 border-2 border-black bg-black" />
             <div className="relative h-full min-h-[520px] overflow-hidden border-2 border-black bg-white">
               <Image
-                src="/daniel-flockhart.jpg"
+                src="/daniel-flockhart-2026.jpg"
                 alt="Portrait of Daniel Flockhart"
                 fill
                 priority
@@ -96,7 +96,7 @@ export default async function Home() {
       <Section
         eyebrow="Selected work"
         eyebrowSide="right"
-        title="Projects that show research depth, product ownership and engineering execution."
+        title="Projects"
         className={homeSectionClassName}
       >
         <div className="mb-8">
@@ -109,7 +109,7 @@ export default async function Home() {
         </div>
       </Section>
 
-      <Section eyebrow="Experience" title="Technical work with a bias toward ownership." className={homeSectionClassName}>
+      <Section eyebrow="Experience" title="Experience" className={homeSectionClassName}>
         <div className="border-y-2 border-black bg-white">
           {experience.map((item) => (
             <article key={`${item.role}-${item.organisation}`} className="border-b-2 border-black p-6 last:border-b-0">
@@ -133,7 +133,7 @@ export default async function Home() {
         </div>
       </Section>
 
-      <Section eyebrow="Skills" title="Technical skills, AI knowledge and investigation experience." className={homeSectionClassName}>
+      <Section eyebrow="Skills" title="Technical skills" className={homeSectionClassName}>
         <div className="grid gap-4 lg:grid-cols-2">
           {skillGroups.map((group) => (
             <article key={group.title} className="border-2 border-black bg-white p-5 shadow-[6px_6px_0_#050505]">

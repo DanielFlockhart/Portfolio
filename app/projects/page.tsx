@@ -25,7 +25,7 @@ export default async function ProjectsPage() {
   const projects = prioritiseProjects(await getPortfolioProjects());
 
   return (
-      <Section eyebrow="Projects" title="A living record of systems I have built, shipped and researched." className="min-h-[calc(100svh-4rem)] pt-20">
+      <Section eyebrow="Projects" title="Systems I have built, shipped & researched." className="min-h-[calc(100svh-4rem)] pt-20">
         <p className="mb-10 max-w-3xl border-l-8 border-black bg-white py-2 pl-5 text-lg font-medium leading-8 text-neutral-700">
         The work spans molecular ML pipelines, travel-tech product engineering, digital chemistry research and security-focused builds.
         </p>
