@@ -102,7 +102,7 @@ export const projects: Project[] = [
     description:
       "Co-founded and led technical development of Matched Stay, a middleware platform for non-standard corporate accommodation: long stays, multi-room projects, rotating cohorts, phased sites, crisis response and aviation disruption. The AI negotiation layer is the core technical differentiator: LLM-assisted and agentic workflows target suppliers over email and voice, capture unstructured responses, and normalise rates, terms, availability, room mix, cancellation, inclusions and policy constraints into comparable offers. The product sits upstream of a client's normal travel stack, turning request intake into supplier outreach, negotiated options and structured approvals. The downstream strategy is to bridge confirmed bookings back into TMC/GDS records so duty of care, itinerary visibility, reporting and reconciliation remain intact.",
     category: "Startup / Full-stack Product",
-    year: "2023—Present",
+    year: "July 2023 - June 2026",
     status: "Live",
     visibility: "published",
     featured: true,
@@ -549,7 +549,7 @@ export const experience: Experience[] = [
   {
     role: "Co-founder, CTO & Lead Software Engineer",
     organisation: "Matched Stay",
-    period: "Jul 2023 — Present",
+    period: "July 2023 — June 2026",
     summary:
       "Leading technical development, product design and deployment of a travel-tech platform while supporting client acquisition, investor conversations and release planning.",
     tags: ["Startup", "Full-stack", "Product"],
