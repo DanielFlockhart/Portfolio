@@ -45,11 +45,13 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
         <p className="mt-10 border-l-8 border-black pl-4 text-xs font-black uppercase text-neutral-700">{project.category}</p>
         <h1 className="mt-5 max-w-5xl text-5xl font-black uppercase leading-tight text-black sm:text-7xl">{project.title}</h1>
         <p className="mt-6 max-w-3xl text-lg font-medium leading-8 text-neutral-700">{project.kicker}</p>
-        <div className="mt-8 flex flex-wrap gap-3">
-          {project.links.map((link) => (
-            <InlineLink key={link.label} link={link} />
-          ))}
-        </div>
+        {project.links.length ? (
+          <div className="mt-8 flex flex-wrap gap-3">
+            {project.links.map((link) => (
+              <InlineLink key={link.label} link={link} />
+            ))}
+          </div>
+        ) : null}
       </section>
 
       <Section>

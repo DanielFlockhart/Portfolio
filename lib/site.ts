@@ -100,10 +100,10 @@ export const projects: Project[] = [
     summary:
       "An AI-assisted web and mobile travel-tech platform for sourcing, negotiating and managing complex workforce accommodation, then turning supplier responses into governed offers, approvals and booking records.",
     description:
-      "Co-founded and led technical development of Matched Stay, a middleware platform for non-standard corporate accommodation: long stays, multi-room projects, rotating cohorts, phased sites, crisis response and aviation disruption. The AI negotiation layer is the core technical differentiator: LLM-assisted and agentic workflows target suppliers over email and voice, capture unstructured responses, and normalise rates, terms, availability, room mix, cancellation, inclusions and policy constraints into comparable offers. The product sits upstream of a client's normal travel stack, turning request intake into supplier outreach, negotiated options and structured approvals. The downstream strategy is to bridge confirmed bookings back into TMC/GDS records so duty of care, itinerary visibility, reporting and reconciliation remain intact.",
+      "Co-founded and led technical development of Matched Stay, a middleware platform for non-standard corporate accommodation: long stays, multi-room projects, rotating cohorts, phased sites, crisis response and aviation disruption. The AI negotiation layer was the core technical differentiator: LLM-assisted and agentic workflows targeted suppliers over email and voice, captured unstructured responses, and normalised rates, terms, availability, room mix, cancellation, inclusions and policy constraints into comparable offers. The product was designed to sit upstream of a client's normal travel stack, turning request intake into supplier outreach, negotiated options and structured approvals. The downstream strategy was to bridge confirmed bookings back into TMC/GDS records so duty of care, itinerary visibility, reporting and reconciliation remained intact.",
     category: "Startup / Full-stack Product",
     year: "July 2023 - June 2026",
-    status: "Live",
+    status: "Archived",
     visibility: "published",
     featured: true,
     featuredOrder: 1,
@@ -137,23 +137,21 @@ export const projects: Project[] = [
       { label: "AI focus", value: "Negotiation agents" },
       { label: "Platforms", value: "Web + mobile" },
       { label: "Use cases", value: "Workforce + IROPS" },
-      { label: "Stage", value: "Live / pilot validation" },
+      { label: "Stage", value: "Pilot validation" },
       { label: "Award", value: "£5k accelerator" },
     ],
     spotlight: {
       eyebrow: "AI negotiation layer",
       title: "Agentic sourcing and supplier negotiation",
       body:
-        "The core technical focus is using LLM-assisted workflows to contact accommodation suppliers, capture email and voice responses, negotiate rates and terms, then normalise the output into comparable, auditable offers for approval.",
+        "The core technical focus was using LLM-assisted workflows to contact accommodation suppliers, capture email and voice responses, negotiate rates and terms, then normalise the output into comparable, auditable offers for approval.",
       points: [
         "Supplier outreach over email and voice",
         "LLM extraction for rates, terms and constraints",
         "Agentic workflow from sourcing to approval-ready offers",
       ],
     },
-    links: [
-      { label: "Website", href: "https://matchedstay.co.uk", external: true },
-    ],
+    links: [],
   },
   {
     slug: "digital-chemistry-research",
@@ -495,7 +493,7 @@ export const achievements: Achievement[] = [
       "Won £5,000 through the University of Birmingham Elevate Cohort 3 accelerator for Matched Stay.",
     details: [
       "Secured £5,000 from the University of Birmingham's Elevate accelerator while building Matched Stay.",
-      "Used the award as external validation for a live travel-tech product rather than a purely academic idea.",
+      "Used the award as external validation for a real travel-tech venture rather than a purely academic idea.",
       "Added credibility for investor conversations, early customer discussions and product planning.",
       "Connected technical execution with commercial storytelling, pitch discipline and startup operating pressure.",
     ],
@@ -551,7 +549,7 @@ export const experience: Experience[] = [
     organisation: "Matched Stay",
     period: "July 2023 — June 2026",
     summary:
-      "Leading technical development, product design and deployment of a travel-tech platform while supporting client acquisition, investor conversations and release planning.",
+      "Led technical development, product design and deployment of a travel-tech platform while supporting client acquisition, investor conversations and release planning.",
     tags: ["Startup", "Full-stack", "Product"],
   },
   {
