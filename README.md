@@ -1,6 +1,6 @@
-# Daniel Flockhart Portfolio
+Daniel Flockhart — Portfolio
 
-A mostly vibe coded reusable portfolio starter built with **Next.js**, **Tailwind CSS** and **Firebase**. It is deliberately general-purpose: suitable for software engineering, AI/ML, startup, research and product applications rather than one company-specific job application.
+Source code for my personal portfolio website, built with Next.js, TypeScript, Tailwind CSS and Firebase. The site presents my software engineering and AI projects through detailed case studies, with a server-side contact form.
 
 ## What this includes
 
